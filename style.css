@@ -1,0 +1,345 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Bubblegum Sans;
+}
+
+h1 {
+    color: rgb(96, 236, 255);
+}
+
+#main1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    margin-left: 1%;
+    margin-top: 1px;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    /* position: relative;  */
+}
+
+
+#camp {
+    padding: 4px;
+    position: absolute;
+    top: 23px;
+    /* Position the nav vertically centered */
+    left: 63px;
+    color: white;
+    font-family: sans-serif;
+    background-color: #000000;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    display: inline-block;
+
+}
+
+#navbar {
+    height: 60px;
+    position: relative;
+    background-color: rgb(246, 251, 255);
+    padding: 4px;
+    border-bottom: 4px solid black;
+    /* Add relative positioning to establish a containing block for the nav */
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    border-radius: 7px;
+    display: inline-block;
+    margin: 0px 17px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: large;
+    color: #fff;
+    background-color: #000000;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+
+}
+
+#main2 {
+    width: 100%;
+    height: 91%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+#headingc1 {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background: linear-gradient(45deg, #232323, #101010);
+    color: #3688cf;
+    padding: 10px;
+    text-align: center;
+}
+
+#container1 {
+    width: 24%;
+    height: 100%;
+    border-right: solid 2px black;
+    background: linear-gradient(45deg, #474747, #101010);
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    overflow: auto;
+    /* Enable vertical scrolling */
+}
+
+
+#container1 ul {
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+#container1 ul li {
+    padding: 22px;
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-align: center;
+    /* Center text within li */
+}
+
+#container1 ul li:hover {
+    color: rgb(255, 255, 87);
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#container1 ul li a {
+    display: block;
+    padding: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+
+#container1 ul li li:hover{
+    color: white;
+    cursor:default;
+}
+#container1 ul li li a:hover{
+    color: white;
+    cursor:default;
+    /* cursor:auto; */
+}
+#container1 ul li li a {
+    margin-left: 20%;
+    text-align: start;
+    font-size: 15px;
+    list-style-type:disc;
+}
+
+#container2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246, 251, 255);
+    /* background: linear-gradient(45deg, #a7d6ff, #058aff); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+#heading {
+    font-size: 40px;
+    /* color: #3700ff; */
+    text-shadow: 3px 3px 2px rgba(0, 82, 160, 0.8);
+    /* background-color: #43a7ff; */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    font-family: "Libre Baskerville", serif;
+    padding: 4px;
+    border: solid 1px black;
+    border-radius: 8px;
+    margin: 1% 0%;
+}
+
+.image {
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.image:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.list-container {
+    width: 23%;
+    /* Three columns with spacing */
+    margin: 4.2%;
+    /* Adjust margin as needed */
+    padding: 0.5%;
+    border-radius: 8px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.list-container li {
+    /* border: 2px solid #000000; */
+    padding: 10px;
+}
+
+.list-container li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.list-container li a:hover {
+    font-size: large;
+}
+
+.list-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    background-color: #f0ffff;
+}
+
+
+
+.boxes {
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+}
+
+#box1 {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    /* background-color: aqua; */
+    animation: box1animation 3s ease-in-out 2s forwards;
+}
+
+#box2 {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    /* background-color: bisque; */
+    animation: box2animation 3s ease-in-out 2s forwards;
+}
+
+#box3 {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    /* background-color: blueviolet; */
+    animation: box3animation 3s ease-in-out 2s forwards;
+}
+
+#box4 {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    /* background-color: yellow; */
+    animation: box4animation 3s ease-in-out 2s forwards;
+}
+
+@keyframes box1animation {
+    0% {
+        width: 50%;
+        height: 50%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0%;
+        border-bottom-right-radius: 30%;
+    }
+}
+
+
+@keyframes box2animation {
+    0% {
+        width: 50%;
+        height: 50%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0%;
+        border-bottom-left-radius: 30%;
+    }
+}
+
+@keyframes box3animation {
+    0% {
+        width: 50%;
+        height: 50%;
+
+    }
+
+    100% {
+        width: 0%;
+        height: 0%;
+        border-top-right-radius: 30%;
+    }
+}
+
+
+@keyframes box4animation {
+    0% {
+        width: 50%;
+        height: 50%;
+    }
+
+    100% {
+        width: 0%;
+        height: 0%;
+        border-top-left-radius: 30%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fafafa;
+    border: solid 1px black;
+
+    border-radius: 10px;
+}
