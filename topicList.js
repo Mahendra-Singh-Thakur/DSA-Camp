@@ -46,7 +46,7 @@ let COURSES = [
             "Backtracking"
             ,],
         Modules: {
-            "Bascis of DSA": ["Introduction", "Classification of Data Structures ", "Time Complexity", "Asymtotic Notations", "Space Complexity"],
+            "Basics of DSA": ["Introduction", "Classification of Data Structures ", "Time Complexity", "Asymtotic Notations", "Space Complexity"],
             "Array": ["Insertion", "Deletion", "Updating", "Splitting", "Concatenation", "Filtering"],
             "String": ["Substring", "Length", "Searching", "Concatenation"],
             "Linked List": ["linked List basic things", "Singly Linked List", "Doubly Linked List", "Circular Linked List", "Applications"],

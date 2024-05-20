@@ -25,7 +25,7 @@ let COURSES = [
             "Backtracking"
             ,],
         Modules: {
-            "Bascis of DSA": ["Introduction", "Classification of Data Structures ", "Time Complexity", "Asymtotic Notations", "Space Complexity"],
+            "Basics of DSA": ["Introduction", "Classification of Data Structures ", "Time Complexity", "Asymtotic Notations", "Space Complexity"],
             "Array": ["Insertion", "Deletion", "Updating", "Splitting", "Concatenation", "Filtering"],
             "String": ["Substring", "Length", "Searching", "Concatenation"],
             "Linked List": ["linked List basic things", "Singly Linked List", "Doubly Linked List", "Circular Linked List", "Applications"],
@@ -41,7 +41,7 @@ let COURSES = [
             "Graph Traversal": ["DFS", "BFS", "Traversal Orders", "Graph Representation"],
             "Shortest Path Algorithms": ["Kruskal", "Prim's", "Dijkstra's",],
             "Recursion": ["Basic Recursion Concepts", "Mathematical Problems", "Array and String Manipulations", "Divide and Conquer Method", "Dynamic Programming", "Backtracking Algorithms"],
-            "Bit Manipulation": ["Basic Bitwise Operators", "Bit Manipulation Techniques", "Bit Masks", "d", "e"],
+            "Bit Manipulation": ["Basic Bitwise Operators", "Bit Manipulation Techniques", "Bit Masks"],
             "Sorting Algorithms": ["Bubble sort", "Selection sort", "Insertion sort", "Merge sort", "Quick sort", "Heap sort", "Counting sort", "Bucket sort", "Shell sort"],
             "Searching Alogrithms": ["Linear search", "Binary search"],
             "Divide and Conquer Algorithms": ["Defination"],
@@ -149,42 +149,43 @@ let directoryPath = '/Git hub/NEW';
 
 for (let topic of DSA.Topics) {
     const folderNam = `${topic}`;
+    console.log("const folderNam = `${topic}` = ", folderNam);
     // console.log("topic => ", topic);
-    fs.mkdir(path.join(directoryPath, folderNam), (err) => {
-        if (err) {
-            console.error('Error creating folder:', err);
-        } else {
-            console.log('Folder created successfully');
-        }
-    });
+    // fs.mkdir(path.join(directoryPath, folderNam), (err) => {
+    //     if (err) {
+    //         console.error('Error creating folder:', err);
+    //     } else {
+    //         console.log('Folder created successfully');
+    //     }
+    // });
 }
 for (let topic of DSA.Topics) {
     // console.log("topic => ", topic);
     const folderNam = `${topic}`;
             directoryPath = `/Git hub/NEW/${folderNam}`;
+            console.log(directoryPath);
     for (let topi of DSA.Modules[topic]) {
         // console.log("\t\tModules => ", topi);
         const folderName = `${topi}`;
         const fileNames = [`index.html`, `style.css`, `app.js`];
-
         // Create a new folder
-        fs.mkdir(path.join(directoryPath, folderName), (err) => {
-            if (err) {
-                console.error('Error creating folder:', err);
-            } else {
-                console.log('Folder created successfully');
+        // fs.mkdir(path.join(directoryPath, folderName), (err) => {
+        //     if (err) {
+        //         console.error('Error creating folder:', err);
+        //     } else {
+        //         console.log('Folder created successfully');
 
-                // Loop through each file name and create a new file inside the folder
-                fileNames.forEach((fileName, index) => {
-                    fs.writeFile(path.join(directoryPath, folderName, fileName), `Content of file ${index + 1}`, (err) => {
-                        if (err) {
-                            console.error(`Error creating file ${fileName}:`, err);
-                        } else {
-                            console.log(`File ${fileName} created successfully`);
-                        }
-                    });
-                });
-            }
-        });
+        //         // Loop through each file name and create a new file inside the folder
+        //         fileNames.forEach((fileName, index) => {
+        //             fs.writeFile(path.join(directoryPath, folderName, fileName), `Content of file ${index + 1}`, (err) => {
+        //                 if (err) {
+        //                     console.error(`Error creating file ${fileName}:`, err);
+        //                 } else {
+        //                     console.log(`File ${fileName} created successfully`);
+        //                 }
+        //             });
+        //         });
+        //     }
+        // });
     }
 }
