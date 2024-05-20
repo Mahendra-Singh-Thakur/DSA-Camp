@@ -3,10 +3,10 @@ let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
 
 let Null = "#";
-let imgscr = "../IMAGES/DSA/logologo.jpg";
+let imgscr = "../IMAGES/CN/logologo.jpeg";
 
 let ul = document.createElement("ul");
-for (let topic of DSA.Topics) {
+for (let topic of CN.Topics) {
     let li = document.createElement("li");
     li.setAttribute("class", "topics");
     li.setAttribute("id", topic);
@@ -17,14 +17,14 @@ subtopics.appendChild(ul);
 let topics = document.querySelectorAll(".topics");
 topics.forEach((t) => {
     let string = "";
-    for (let item of DSA.Modules[t.innerText]) {
+    for (let item of CN.Modules[t.innerText]) {
         string += `<li id="${item}">
         <div class="content">
-            <a class="thumbnail" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
+            <a class="thumbnail" href="../CN/SubTopics/${t.innerText}/${item}/index.html">
                 <img src="${imgscr}" alt="please wait">
             </a>
             <div class="info">
-                <a id="${item}" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                <a id="${item}" href="../CN/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
             </div>
         </div>
         </li>`;
@@ -32,7 +32,7 @@ topics.forEach((t) => {
 
     t.addEventListener("click", () => {
         // console.log(t.innerText);
-        Topic.innerHTML=t.innerText;
+        Topic.innerHTML = t.innerText;
         if (t.classList.contains("active")) {
             t.classList.remove("active");
             list.innerHTML = "";
@@ -46,7 +46,7 @@ topics.forEach((t) => {
     });
 });
 // document.addEventListener("DOMContentLoaded", function() {
-//     let element = document.getElementById("Basics of DSA");
+//     let element = document.getElementById("Basics of CN");
 //     let event = new Event("click");
 //     element.dispatchEvent(event);
 // });

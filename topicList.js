@@ -10,7 +10,7 @@ COURSESName = {
     ],
     FullName: {
         "DSA": ["Data Structures And Algorithms"],
-        "DC ": ["Discrete Mathematics"],
+        "DC ": ["Data Communication"],
         "CN ": ["Computer Networks"],
         "COA": ["Computer Organization And Architecture"],
         "ADA": ["Algorithms And Data Structures"],
