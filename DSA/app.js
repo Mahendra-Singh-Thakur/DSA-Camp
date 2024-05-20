@@ -44,7 +44,7 @@ topics.forEach((t) => {
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
-    let element = document.getElementById("Bascis of DSA");
+    let element = document.getElementById("Basics of DSA");
     let event = new Event("click");
     element.dispatchEvent(event);
 });

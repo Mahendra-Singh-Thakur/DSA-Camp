@@ -232,49 +232,47 @@ if (dsaCourse) {
             topicModules.forEach((module) => {
                 const moduleDirectory = path.join(rootDirectoryPath, 'DSA', topic, module);
                 // Generate content for index.html and style.css
-                const indexHtmlContent = `
-                <!DOCTYPE html>
-                <html lang="en">
-                
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>DSACamp</title>
-                    <link rel="stylesheet" href="style.css">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-                </head>
-                
-                <body>
-                    <div id="navbar">
-                        <img id="logo" src="/DSA-Camp/IMAGES/Home/logo.png" alt="image">
-                        <div id="camp">CAMP</div>
-                        <nav>
-                            <ul>
-                                <li><a href="/DSA-Camp/index.html">Home</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i></li>
-                                <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i></li>
-                                <li><a href="/DSA-Camp/DSA/index.html">${topic}</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i></li>
-                                <li><a>${module}</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                
-                    <div id="main1">
-                        
-                    </div>
-                    <script src="app.js"></script>
-                
-                </body>
-                
-                </html>`;
+                const indexHtmlContent = `<!DOCTYPE html>
+<html lang="en">
 
-                const styleCssContent = `
-/* Styles for ${module} module in ${topic} topic */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSACamp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="navbar">
+        <img id="logo" src="/DSA-Camp/IMAGES/Home/logo.png" alt="image">
+        <div id="camp">CAMP</div>
+        <nav>
+            <ul>
+                <li><a href="/DSA-Camp/index.html">Home</a></li>
+                <li><i class="fa-solid fa-arrow-right"></i></li>
+                <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
+                <li><i class="fa-solid fa-arrow-right"></i></li>
+                <li><a href="/DSA-Camp/DSA/index.html">${topic}</a></li>
+                <li><i class="fa-solid fa-arrow-right"></i></li>
+                <li><a>${module}</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="main1">
+        
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>`;
+
+                const styleCssContent = `/* Styles for ${module} module in ${topic} topic */
 * {
     padding: 0;
     margin: 0;
@@ -330,9 +328,8 @@ img {
     background-color: rgb(246, 251, 255);
     padding: 4px;
     border-bottom: 3px solid black;
-    z-index: 999; 
+    z-index: 999;
 }
-
 
 nav {
     position: absolute;
@@ -341,23 +338,23 @@ nav {
     transform: translate(-50%, -50%);
 }
 
-nav ul h1 {
-    text-align: center;
-}
-
 nav ul {
+    padding: 0;
+    margin: 0;
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
+    margin: 5px;
 }
 
 nav ul li a {
     border-radius: 7px;
     display: inline-block;
-    margin: 0px 17px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-decoration: none;
     font-size: large;
     color: #fff;
@@ -366,7 +363,7 @@ nav ul li a {
 
 nav ul li a:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-    
+
 }
 
 #main1 {
@@ -375,9 +372,9 @@ nav ul li a:hover {
     /* height: calc(100vh - 60px);  */
     background: linear-gradient(45deg, #a7d6ff, #058aff);
     /* border-top: solid 3px green; */
-    padding-top: 73px; 
+    padding-top: 73px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     /* align-items: center; */
 }
 
@@ -387,6 +384,7 @@ nav ul li a:hover {
     background: linear-gradient(45deg, #a7d6ff, #058aff);
     margin-top: 74px; 
 } */
+
 /* #main2 {
     width: 100%;
     height: 91%;
