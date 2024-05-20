@@ -9,7 +9,7 @@ for (let topic of DSA.Topics) {
     let li = document.createElement("li");
     li.setAttribute("class", "topics");
     li.setAttribute("id", topic);
-    li.innerHTML = `<a href="${Null}">${topic}</a>`;
+    li.innerHTML = `<a>${topic}</a>`;
     ul.appendChild(li);
 }
 subtopics.appendChild(ul);
@@ -19,11 +19,11 @@ topics.forEach((t) => {
     for (let item of DSA.Modules[t.innerText]) {
         string += `<li id="${item}">
         <div class="content">
-            <a class="thumbnail" href="${Null}">
+            <a class="thumbnail" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
                 <img src="${imgscr}" alt="please wait">
             </a>
             <div class="info">
-                <a id="${item}" href="">${item}</a>
+                <a id="${item}" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
             </div>
         </div>
         </li>`;
@@ -43,8 +43,8 @@ topics.forEach((t) => {
         }
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    let element = document.getElementById("Basics of DSA");
-    let event = new Event("click");
-    element.dispatchEvent(event);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     let element = document.getElementById("Basics of DSA");
+//     let event = new Event("click");
+//     element.dispatchEvent(event);
+// });
