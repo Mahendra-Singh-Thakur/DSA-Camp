@@ -126,7 +126,7 @@ let COURSES = [
             "Dynamic Programming": ["Introduction to Dynamic Programming", "Fibonacci Sequence", "Knapsack Problem", "Matrix Chain Multiplication", "Floyd-Warshall Algorithm"],
             "Greedy Algorithms": ["Introduction to Greedy Algorithms", "Knapsack Problem", "Huffman Coding", "Kruskal's Algorithm", "Prim's Algorithm","Dijkstra's Algorithm",", Longest Common Subsequence"],
             "Backtracking": [" Introduction to Backtracking", "N-Queens Problem", "Subset Sum Problem", ],
-            "Graph Algorithms": ["Introduction to Graphs", "b", "c", "d", "e"],
+            "Graph Algorithms": ["Introduction to Graphs", "", "", "", ""],
             "Hashing": ["a", "b", "c", "d", "e"],
             "NP-Completeness and Computational Intractability": ["a", "b", "c", "d", "e"],
             "Randomized Algorithms and  Approximation Algorithms": ["a", "b", "c", "d", "e"],
