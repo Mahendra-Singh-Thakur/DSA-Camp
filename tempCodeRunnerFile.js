@@ -32,7 +32,7 @@ let COURSES = [
             "Stack": ["Defination", "Basis Operations", "Infix,Prefix,and Postfix Notations", "Implementation", "Applications",],
             "Queue": ["Defination", "Basic Operations", "Dequeue", "Circular Queue", "Implementation", "Priority Queue", "Applications",],
             "Hash Tables": ["Introduction to Hash Tables", "Hash Functions", "Collision Handling", "Applications and Implementaions",],
-            "Trees": ["Introduction to Trees", "Binary Trees:", "Binary Search Trees (BST)", "AVL Tree", "B Tree", "Application",],
+            "Trees": ["Introduction to Trees", "Binary Trees", "Binary Search Trees (BST)", "AVL Tree", "B Tree", "Application",],
             "Tree Traversal": ["Pre-order Traversal", "In-order Traversal", "Post-order Traversal", "Level-order Traversal"],
             "Min Spanning Tree": ["Introduction to Minimum Spanning Trees (MST)", "Prim's Algorithm", "Kruskal's Algorithm", "Graph Representation and Data Structures",],
             "Recursive Tree": ["Introduction to Recursive Trees", "Recursive Tree Traversal Algorithms", "Tree Rotations", "Application",],
@@ -129,63 +129,83 @@ let COURSES = [
     },
 
 ];
-for (let COURSE of COURSES) {
-    console.log(COURSE.Name);
-    for (let topic of COURSE.Topics) {
-        console.log("topic => ", topic);
+// for (let COURSE of COURSES) {
+//     console.log(COURSE.Name);
+//     for (let topic of COURSE.Topics) {
+//         console.log("topic => ", topic);
 
-        // Access modules using the topic as a key
-        for (let topi of COURSE.Modules[topic]) {
-            console.log("\t\tModules => ", topi);
-        }
-    }
-}
-
-// const fs = require('fs');
-// const path = require('path');
-
-// // Define the directory path, folder name, and file names
-// let directoryPath = '/Git hub/NEW';
-
-// for (let topic of DSA.Topics) {
-//     const folderNam = `${topic}`;
-//     console.log("const folderNam = `${topic}` = ", folderNam);
-//     // console.log("topic => ", topic);
-//     // fs.mkdir(path.join(directoryPath, folderNam), (err) => {
-//     //     if (err) {
-//     //         console.error('Error creating folder:', err);
-//     //     } else {
-//     //         console.log('Folder created successfully');
-//     //     }
-//     // });
-// }
-// for (let topic of DSA.Topics) {
-//     // console.log("topic => ", topic);
-//     const folderNam = `${topic}`;
-//             directoryPath = `/Git hub/NEW/${folderNam}`;
-//             console.log(directoryPath);
-//     for (let topi of DSA.Modules[topic]) {
-//         // console.log("\t\tModules => ", topi);
-//         const folderName = `${topi}`;
-//         const fileNames = [`index.html`, `style.css`, `app.js`];
-//         // Create a new folder
-//         // fs.mkdir(path.join(directoryPath, folderName), (err) => {
-//         //     if (err) {
-//         //         console.error('Error creating folder:', err);
-//         //     } else {
-//         //         console.log('Folder created successfully');
-
-//         //         // Loop through each file name and create a new file inside the folder
-//         //         fileNames.forEach((fileName, index) => {
-//         //             fs.writeFile(path.join(directoryPath, folderName, fileName), `Content of file ${index + 1}`, (err) => {
-//         //                 if (err) {
-//         //                     console.error(`Error creating file ${fileName}:`, err);
-//         //                 } else {
-//         //                     console.log(`File ${fileName} created successfully`);
-//         //                 }
-//         //             });
-//         //         });
-//         //     }
-//         // });
+//         // Access modules using the topic as a key
+//         for (let topi of COURSE.Modules[topic]) {
+//             console.log("\t\tModules => ", topi);
+//         }
 //     }
 // }
+
+const fs = require('fs');
+const path = require('path');
+
+// Define the root directory path
+const rootDirectoryPath = '/Git hub/NEW/';
+
+// Get the DSA course object
+const dsaCourse = COURSES.find(course => course.Name === "DSA");
+
+// Check if the DSA course exists
+if (dsaCourse) {
+    const dsaTopics = dsaCourse.Topics;
+    const dsaModules = dsaCourse.Modules;
+
+    // Create the root folder for the "DSA" course
+    const dsaRootDirectory = path.join(rootDirectoryPath, 'DSA');
+    fs.mkdir(dsaRootDirectory, { recursive: true }, (err) => {
+        if (err) {
+            console.error('Error creating DSA root folder:', err);
+        } else {
+            console.log(`Root folder 'DSA' created successfully`);
+
+            // Iterate over each topic in the "DSA" course
+            dsaTopics.forEach((topic) => {
+                const topicDirectory = path.join(dsaRootDirectory, topic);
+                // Create a new folder for the topic
+                fs.mkdir(topicDirectory, { recursive: true }, (err) => {
+                    if (err) {
+                        console.error(`Error creating folder for topic '${topic}':`, err);
+                    } else {
+                        console.log(`Folder '${topic}' created successfully`);
+
+                        // Check if the topic has associated modules
+                        if (dsaModules.hasOwnProperty(topic)) {
+                            const topicModules = dsaModules[topic];
+                            // Iterate over each module in the topic
+                            topicModules.forEach((module) => {
+                                const moduleDirectory = path.join(topicDirectory, module);
+                                // Create a new folder for the module
+                                fs.mkdir(moduleDirectory, { recursive: true }, (err) => {
+                                    if (err) {
+                                        console.error(`Error creating folder for module '${module}' in topic '${topic}':`, err);
+                                    } else {
+                                        console.log(`Folder '${module}' created successfully in topic '${topic}'`);
+
+                                        // Create files inside the module folder
+                                        const fileNames = ['index.html', 'style.css', 'app.js'];
+                                        fileNames.forEach((fileName) => {
+                                            fs.writeFile(path.join(moduleDirectory, fileName), `Content of ${fileName}`, (err) => {
+                                                if (err) {
+                                                    console.error(`Error creating file '${fileName}' in module '${module}' in topic '${topic}':`, err);
+                                                } else {
+                                                    console.log(`File '${fileName}' created successfully in module '${module}' in topic '${topic}'`);
+                                                }
+                                            });
+                                        });
+                                    }
+                                });
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    });
+} else {
+    console.error('DSA course not found.');
+}
