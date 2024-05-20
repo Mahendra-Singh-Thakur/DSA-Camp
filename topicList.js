@@ -19,7 +19,7 @@ COURSESName = {
         "PS": ["Probability and Statistics"]
     }
 };
-const COURSES = [
+let COURSES = [
     DSA = {
         Name: "DSA",
         Topics: ["Bascis of DSA",
@@ -40,10 +40,10 @@ const COURSES = [
             "Bit Manipulation",
             "Sorting Algorithms",
             "Searching Alogrithms",
-            "Divide and Conquer Algorithms:",
-            "Greedy Algorithms:",
-            "Dynamic Programming:",
-            "Backtracking:"
+            "Divide and Conquer Algorithms",
+            "Greedy Algorithms",
+            "Dynamic Programming",
+            "Backtracking"
             ,],
         Modules: {
             "Bascis of DSA": ["Introduction", "Classification of Data Structures ", "Time Complexity", "Asymtotic Notations", "Space Complexity"],
@@ -65,10 +65,10 @@ const COURSES = [
             "Bit Manipulation": ["Basic Bitwise Operators", "Bit Manipulation Techniques", "Bit Masks", "d", "e"],
             "Sorting Algorithms": ["Bubble sort", "Selection sort", "Insertion sort", "Merge sort", "Quick sort", "Heap sort", "Counting sort", "Bucket sort", "Shell sort"],
             "Searching Alogrithms": ["Linear search", "Binary search"],
-            "Divide and Conquer Algorithms:": ["Defination"],
-            "Greedy Algorithms:": ["Defination"],
-            "Dynamic Programming:": ["Defination"],
-            "Backtracking:": ["Defination"],
+            "Divide and Conquer Algorithms": ["Defination"],
+            "Greedy Algorithms": ["Defination"],
+            "Dynamic Programming": ["Defination"],
+            "Backtracking": ["Defination"],
         }
     },
     DC = {
