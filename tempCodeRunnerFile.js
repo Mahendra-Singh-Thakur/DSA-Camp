@@ -1,7 +1,7 @@
 let COURSES = [
     DSA = {
         Name: "DSA",
-        Topics: ["Bascis of DSA",
+        Topics: ["Basics of DSA",
             "Array",
             "String",
             "Linked List",
@@ -129,63 +129,63 @@ let COURSES = [
     },
 
 ];
-// for (let COURSE of COURSES) {
-//     console.log(COURSE.Name);
-//     for (let topic of COURSE.Topics) {
-//         console.log("topic => ", topic);
+for (let COURSE of COURSES) {
+    console.log(COURSE.Name);
+    for (let topic of COURSE.Topics) {
+        console.log("topic => ", topic);
 
-//         // Access modules using the topic as a key
-//         for (let topi of COURSE.Modules[topic]) {
-//             console.log("\t\tModules => ", topi);
-//         }
-//     }
-// }
-
-const fs = require('fs');
-const path = require('path');
-
-// Define the directory path, folder name, and file names
-let directoryPath = '/Git hub/NEW';
-
-for (let topic of DSA.Topics) {
-    const folderNam = `${topic}`;
-    console.log("const folderNam = `${topic}` = ", folderNam);
-    // console.log("topic => ", topic);
-    // fs.mkdir(path.join(directoryPath, folderNam), (err) => {
-    //     if (err) {
-    //         console.error('Error creating folder:', err);
-    //     } else {
-    //         console.log('Folder created successfully');
-    //     }
-    // });
-}
-for (let topic of DSA.Topics) {
-    // console.log("topic => ", topic);
-    const folderNam = `${topic}`;
-            directoryPath = `/Git hub/NEW/${folderNam}`;
-            console.log(directoryPath);
-    for (let topi of DSA.Modules[topic]) {
-        // console.log("\t\tModules => ", topi);
-        const folderName = `${topi}`;
-        const fileNames = [`index.html`, `style.css`, `app.js`];
-        // Create a new folder
-        // fs.mkdir(path.join(directoryPath, folderName), (err) => {
-        //     if (err) {
-        //         console.error('Error creating folder:', err);
-        //     } else {
-        //         console.log('Folder created successfully');
-
-        //         // Loop through each file name and create a new file inside the folder
-        //         fileNames.forEach((fileName, index) => {
-        //             fs.writeFile(path.join(directoryPath, folderName, fileName), `Content of file ${index + 1}`, (err) => {
-        //                 if (err) {
-        //                     console.error(`Error creating file ${fileName}:`, err);
-        //                 } else {
-        //                     console.log(`File ${fileName} created successfully`);
-        //                 }
-        //             });
-        //         });
-        //     }
-        // });
+        // Access modules using the topic as a key
+        for (let topi of COURSE.Modules[topic]) {
+            console.log("\t\tModules => ", topi);
+        }
     }
 }
+
+// const fs = require('fs');
+// const path = require('path');
+
+// // Define the directory path, folder name, and file names
+// let directoryPath = '/Git hub/NEW';
+
+// for (let topic of DSA.Topics) {
+//     const folderNam = `${topic}`;
+//     console.log("const folderNam = `${topic}` = ", folderNam);
+//     // console.log("topic => ", topic);
+//     // fs.mkdir(path.join(directoryPath, folderNam), (err) => {
+//     //     if (err) {
+//     //         console.error('Error creating folder:', err);
+//     //     } else {
+//     //         console.log('Folder created successfully');
+//     //     }
+//     // });
+// }
+// for (let topic of DSA.Topics) {
+//     // console.log("topic => ", topic);
+//     const folderNam = `${topic}`;
+//             directoryPath = `/Git hub/NEW/${folderNam}`;
+//             console.log(directoryPath);
+//     for (let topi of DSA.Modules[topic]) {
+//         // console.log("\t\tModules => ", topi);
+//         const folderName = `${topi}`;
+//         const fileNames = [`index.html`, `style.css`, `app.js`];
+//         // Create a new folder
+//         // fs.mkdir(path.join(directoryPath, folderName), (err) => {
+//         //     if (err) {
+//         //         console.error('Error creating folder:', err);
+//         //     } else {
+//         //         console.log('Folder created successfully');
+
+//         //         // Loop through each file name and create a new file inside the folder
+//         //         fileNames.forEach((fileName, index) => {
+//         //             fs.writeFile(path.join(directoryPath, folderName, fileName), `Content of file ${index + 1}`, (err) => {
+//         //                 if (err) {
+//         //                     console.error(`Error creating file ${fileName}:`, err);
+//         //                 } else {
+//         //                     console.log(`File ${fileName} created successfully`);
+//         //                 }
+//         //             });
+//         //         });
+//         //     }
+//         // });
+//     }
+// }

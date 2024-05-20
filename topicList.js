@@ -22,7 +22,7 @@ COURSESName = {
 let COURSES = [
     DSA = {
         Name: "DSA",
-        Topics: ["Bascis of DSA",
+        Topics: ["Basics of DSA",
             "Array",
             "String",
             "Linked List",
