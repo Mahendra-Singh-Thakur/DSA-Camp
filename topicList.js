@@ -116,21 +116,20 @@ let COURSES = [
             "Graph Algorithms",
             "Hashing",
             "NP-Completeness and Computational Intractability",
-            "Randomized Algorithms and  Approximation Algorithms",
+            "Randomized Algorithms and Approximation Algorithms"
         ],
         Modules: {
             "Algorithms": ["Defination", "Designing Algorithms", "Analyzing Algorithms",],
             "Complexity Analysis": ["Introduction to Time Complexity", "Asymptotic Notations", "Analyzing Algorithm Efficiency", "Common Time Complexities", "Analyzing Different Algorithm Types"],
             "Heap and Heap Sort": ["Introduction to Heaps", "Operations on Heaps", "Heap Implementation", "Heap Sort Algorithm", "Applications of Heaps"],
-            "Divide and Conquer": [" Introduction to Divide and Conquer", "Mathematical Foundation", "Merge Sort", "Quick Sort", "Binary Search", "Exponentiation by Squaring", "Matrix Multiplication", ""],
+            "Divide and Conquer": [" Introduction to Divide and Conquer", "Mathematical Foundation", "Merge Sort", "Quick Sort", "Binary Search", "Exponentiation by Squaring", "Matrix Multiplication"],
             "Dynamic Programming": ["Introduction to Dynamic Programming", "Fibonacci Sequence", "Knapsack Problem", "Matrix Chain Multiplication", "Floyd-Warshall Algorithm"],
             "Greedy Algorithms": ["Introduction to Greedy Algorithms", "Knapsack Problem", "Huffman Coding", "Kruskal's Algorithm", "Prim's Algorithm","Dijkstra's Algorithm",", Longest Common Subsequence"],
             "Backtracking": [" Introduction to Backtracking", "N-Queens Problem", "Subset Sum Problem", ],
             "Graph Algorithms": ["Introduction to Graphs", "b", "c", "d", "e"],
             "Hashing": ["a", "b", "c", "d", "e"],
             "NP-Completeness and Computational Intractability": ["a", "b", "c", "d", "e"],
-            "Randomized Algorithms and  Approximation Algorithms": ["a", "b", "c", "d", "e"],
-
+            "Randomized Algorithms and Approximation Algorithms": ["a", "b", "c", "d", "e"],
         },
     },
     OOPM = {

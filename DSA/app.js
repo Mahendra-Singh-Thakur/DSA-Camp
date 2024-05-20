@@ -1,4 +1,5 @@
 let list = document.querySelector(".list");
+let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
 
 let Null = "#";
@@ -30,7 +31,8 @@ topics.forEach((t) => {
     }
 
     t.addEventListener("click", () => {
-        console.log(t.innerText);
+        // console.log(t.innerText);
+        Topic.innerHTML=t.innerText;
         if (t.classList.contains("active")) {
             t.classList.remove("active");
             list.innerHTML = "";
