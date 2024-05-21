@@ -1,1 +1,2 @@
-Content of app.js
+const first=localStorage.getItem('lastClicked');
+console.log(first);

@@ -1,10 +1,8 @@
 let list = document.querySelector(".list");
 let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
-
 let Null = "#";
 let imgscr = "../IMAGES/DSA/logologo.jpg";
-
 let ul = document.createElement("ul");
 for (let topic of DSA.Topics) {
     let li = document.createElement("li");
@@ -32,7 +30,7 @@ topics.forEach((t) => {
 
     t.addEventListener("click", () => {
         // console.log(t.innerText);
-        Topic.innerHTML=t.innerText;
+        Topic.innerHTML = t.innerText;
         if (t.classList.contains("active")) {
             t.classList.remove("active");
             list.innerHTML = "";
@@ -42,11 +40,25 @@ topics.forEach((t) => {
             });
             t.classList.add("active");
             list.innerHTML = string;
+            const lastclick = t.textContent;
+            sessionStorage.setItem('lastClicked', lastclick);
         }
     });
 });
-// document.addEventListener("DOMContentLoaded", function() {
-//     let element = document.getElementById("Basics of DSA");
-//     let event = new Event("click");
-//     element.dispatchEvent(event);
-// });
+console.log(sessionStorage.getItem('lastClicked'));
+if (sessionStorage.getItem('lastClicked') !== null) {
+    document.addEventListener("DOMContentLoaded", function () {
+        let element = document.getElementById(sessionStorage.getItem('lastClicked'));
+        let event = new Event("click");
+        element.dispatchEvent(event);
+    });
+}
+if (sessionStorage.getItem('lastClicked') === null) {
+    console.log("default");
+    document.addEventListener("DOMContentLoaded", function () {
+        let element = document.getElementById('Basics of DSA');
+        let event = new Event("click");
+        element.dispatchEvent(event);
+    });
+}
+

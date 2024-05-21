@@ -202,7 +202,7 @@ nav ul li a:hover {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:center;
     list-style-type: none;
 }
 
