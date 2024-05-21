@@ -122,7 +122,7 @@ nav ul li a:hover {
 
 .active {
     color: yellow;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 #container1 ul {
@@ -143,8 +143,9 @@ nav ul li a:hover {
 
 #container1 ul li a:hover {
     cursor: pointer;
+    color: yellow;
     /* color: rgb(185, 185, 185); */
-    font-size: 22px;
+    font-size: 20px;
 }
 
 #container1 ul li a {
@@ -222,6 +223,7 @@ nav ul li a:hover {
 
 #container2 .list li a {
     text-decoration: none;
+    color: rgb(53, 53, 255);
     font-size: 23px;
 }
 

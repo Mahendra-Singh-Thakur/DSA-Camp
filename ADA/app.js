@@ -1,8 +1,9 @@
 let list = document.querySelector(".list");
+let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
 
 let Null = "#";
-let imgscr = "../IMAGES/ADA/logologo.png";
+let imgscr = "../IMAGES/ADA/logologo.jpg";
 // console.log(moduleHtml);
 
 let ul = document.createElement("ul");
@@ -31,7 +32,8 @@ topics.forEach((t) => {
     }
 
     t.addEventListener("click", () => {
-        console.log(t.innerText);
+        // console.log(t.innerText);
+        Topic.innerHTML=t.innerText;
         if (t.classList.contains("active")) {
             t.classList.remove("active");
             list.innerHTML = "";
@@ -44,8 +46,8 @@ topics.forEach((t) => {
         }
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    let element = document.getElementById("A");
-    let event = new Event("click");
-    element.dispatchEvent(event);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     let element = document.getElementById("Algorithms");
+//     let event = new Event("click");
+//     element.dispatchEvent(event);
+// });
