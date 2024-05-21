@@ -62,7 +62,7 @@ let COURSES = [
             "Graph Traversal": ["DFS", "BFS", "Traversal Orders", "Graph Representation"],
             "Shortest Path Algorithms": ["Kruskal", "Prim's", "Dijkstra's",],
             "Recursion": ["Basic Recursion Concepts", "Mathematical Problems", "Array and String Manipulations", "Divide and Conquer Method", "Dynamic Programming", "Backtracking Algorithms"],
-            "Bit Manipulation": ["Basic Bitwise Operators", "Bit Manipulation Techniques", "Bit Masks", "d", "e"],
+            "Bit Manipulation": ["Basic Bitwise Operators", "Bit Manipulation Techniques", "Bit Masks"],
             "Sorting Algorithms": ["Bubble sort", "Selection sort", "Insertion sort", "Merge sort", "Quick sort", "Heap sort", "Counting sort", "Bucket sort", "Shell sort"],
             "Searching Alogrithms": ["Linear search", "Binary search"],
             "Divide and Conquer Algorithms": ["Defination"],
