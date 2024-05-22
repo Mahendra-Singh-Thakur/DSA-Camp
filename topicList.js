@@ -39,7 +39,7 @@ let COURSES = [
             "Array": ["Insertion", "Deletion", "Updating", "Splitting", "Concatenation", "Filtering"],
             "String": ["Substring", "Length", "Searching", "Concatenation"],
             "Linked List": ["linked List basic things", "Singly Linked List", "Doubly Linked List", "Circular Linked List", "Applications"],
-            "Stack": ["Defination", "Basis Operations", "Infix,Prefix,and Postfix Notations", "Implementation", "Applications",],
+            "Stack": ["Basis Operations", "Infix,Prefix,and Postfix Notations", "Implementation", "Applications",],
             "Queue": ["Defination", "Basic Operations", "Dequeue", "Circular Queue", "Implementation", "Priority Queue", "Applications",],
             "Hash Tables": ["Introduction to Hash Tables", "Hash Functions", "Collision Handling", "Applications and Implementaions",],
             "Trees": ["Introduction to Trees", "Binary Trees:", "Binary Search Trees (BST)", "AVL Tree", "B Tree", "Application",],
