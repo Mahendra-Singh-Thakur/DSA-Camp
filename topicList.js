@@ -1,23 +1,12 @@
 COURSESName = {
-    id: ["DSA",
-        "DC",
-        "CN",
-        "COA",
-        "ADA",
-        "OOPM",
-        "DS",
-        "PS",
-    ],
-    FullName: {
-        "DSA": ["Data Structures And Algorithms"],
-        "DC ": ["Data Communication"],
-        "CN ": ["Computer Networks"],
-        "COA": ["Computer Organization And Architecture"],
-        "ADA": ["Algorithms And Data Structures"],
-        "OOPM": ["Object Oriented Programming"],
-        "DS ": ["Data Structures"],
-        "PS": ["Probability and Statistics"]
-    }
+    "DSA": "Data Structures &amp; Algorithms",
+    "DC ": "Data Communication",
+    "CN ": "Computer Networks",
+    "COA": "Computer Organization &amp; Architecture",
+    "ADA": "Algorithms &amp; Data Structures",
+    "OOPM": "Object Oriented Programming",
+    "DS ": "Data Structures",
+    "PS": "Probability &amp; Statistics"
 };
 let COURSES = [
     DSA = {
@@ -119,17 +108,17 @@ let COURSES = [
             "Randomized Algorithms and Approximation Algorithms"
         ],
         Modules: {
-            "Algorithms":["Defination","Designing Algorithms","Analyzing Algorithms"],
-            "Complexity Analysis":["Introduction to Time Complexity","Asymptotic Notations","Analyzing Algorithm Efficiency","Common Time Complexities","Analyzing Different Algorithm Types"],
-            "Heap and Heap Sort":["Introduction to Heaps","Operations on Heaps","Heap Implementation","Heap Sort Algorithm","Applications of Heaps"],
-            "Divide and Conquer":["Introduction to Divide and Conquer","Mathematical Foundation","Merge Sort","Quick Sort","Binary Search","Exponentiation by Squaring","Matrix Multiplication"],
-            "Dynamic Programming":["Introduction to Dynamic Programming","Fibonacci Sequence","Knapsack Problem","Matrix Chain Multiplication","Floyd-Warshall Algorithm"],
-            "Greedy Algorithms":["Introduction to Greedy Algorithms","Knapsack Problem","Huffman Coding","Kruskal's Algorithm","Prim's Algorithm","Dijkstra's Algorithm","Longest Common Subsequence"],
-            "Backtracking":["Introduction to Backtracking","N-Queens Problem","Subset Sum Problem"],
-            "Graph Algorithms":["Introduction to Graphs","Depth-First Search (DFS)","Breadth-First Search (BFS)","Bellman-Ford Algorithm","Floyd-Warshall Algorithm"," Minimum Spanning Tree (MST) Algorithms","Graph Isomorphism","Eulerian Path and Circuit","Hamiltonian Graph"],
-            "Hashing":["Introduction to Hashing","Hash Tables","Hash Functions","Collision resolution","Linear probing","Quadratic Double Hashing","Bucket Hashing","Deletion and Rehashing"],
-            "NP-Completeness and Computational Intractability":["Introduction to NP Problems"," NP-Complete Problems","NP-Hard Problems","Reductions","Common NP Problems","Satisfiability problem"],
-            "Randomized Algorithms and Approximation Algorithms":["Introduction to Randomized Algorithms","Introduction to Approximation Algorithms"],
+            "Algorithms": ["Defination", "Designing Algorithms", "Analyzing Algorithms"],
+            "Complexity Analysis": ["Introduction to Time Complexity", "Asymptotic Notations", "Analyzing Algorithm Efficiency", "Common Time Complexities", "Analyzing Different Algorithm Types"],
+            "Heap and Heap Sort": ["Introduction to Heaps", "Operations on Heaps", "Heap Implementation", "Heap Sort Algorithm", "Applications of Heaps"],
+            "Divide and Conquer": ["Introduction to Divide and Conquer", "Mathematical Foundation", "Merge Sort", "Quick Sort", "Binary Search", "Exponentiation by Squaring", "Matrix Multiplication"],
+            "Dynamic Programming": ["Introduction to Dynamic Programming", "Fibonacci Sequence", "Knapsack Problem", "Matrix Chain Multiplication", "Floyd-Warshall Algorithm"],
+            "Greedy Algorithms": ["Introduction to Greedy Algorithms", "Knapsack Problem", "Huffman Coding", "Kruskal's Algorithm", "Prim's Algorithm", "Dijkstra's Algorithm", "Longest Common Subsequence"],
+            "Backtracking": ["Introduction to Backtracking", "N-Queens Problem", "Subset Sum Problem"],
+            "Graph Algorithms": ["Introduction to Graphs", "Depth-First Search (DFS)", "Breadth-First Search (BFS)", "Bellman-Ford Algorithm", "Floyd-Warshall Algorithm", " Minimum Spanning Tree (MST) Algorithms", "Graph Isomorphism", "Eulerian Path and Circuit", "Hamiltonian Graph"],
+            "Hashing": ["Introduction to Hashing", "Hash Tables", "Hash Functions", "Collision resolution", "Linear probing", "Quadratic Double Hashing", "Bucket Hashing", "Deletion and Rehashing"],
+            "NP-Completeness and Computational Intractability": ["Introduction to NP Problems", " NP-Complete Problems", "NP-Hard Problems", "Reductions", "Common NP Problems", "Satisfiability problem"],
+            "Randomized Algorithms and Approximation Algorithms": ["Introduction to Randomized Algorithms", "Introduction to Approximation Algorithms"],
         },
     },
     OOPM = {
