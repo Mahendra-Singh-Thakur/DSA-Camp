@@ -95,8 +95,7 @@ nav ul li a:hover {
     display: flex;
     /* flex-direction: column; */
     justify-content: space-evenly;
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -143,7 +142,7 @@ h2 {
 .container2 {
     display: flex; 
     justify-content: space-evenly; 
-    width: 100%;
+    width: 80%;
     /* max-width: 1200px; */
     margin: 20px auto;
     padding: 20px;
