@@ -33,7 +33,7 @@ body {
     font-family: 'Bubblegum Sans', cursive;
     background-color: #16a085;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 1.5rem;
 }
 
@@ -52,14 +52,16 @@ nav ul {
 nav ul li {
     margin: 0 10px;
 }
-
+i{
+    color: white;
+}
 nav ul li a {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1rem;
     color: #fff;
-    background-color: #34495e;
+    background-color: #404e5c;
     border-radius: 20px;
     transition: background-color 0.3s ease;
 }
