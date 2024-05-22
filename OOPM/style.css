@@ -121,8 +121,9 @@ nav ul li a:hover {
 }
 
 .active {
-    color: yellow;
+    color: gold;
     font-size: 21px;
+    text-decoration: underline;
 }
 
 #container1 ul {
@@ -143,7 +144,7 @@ nav ul li a:hover {
 
 #container1 ul li a:hover {
     cursor: pointer;
-    color: yellow;
+    color: rgb(255, 255, 169);
     /* color: rgb(185, 185, 185); */
     font-size: 21px;
 }

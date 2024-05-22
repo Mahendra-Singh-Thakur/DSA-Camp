@@ -17,15 +17,15 @@ topics.forEach((t) => {
     let string = "";
     for (let item of DSA.Modules[t.innerText]) {
         string += `<li id="${item}">
-        <div class="content">
-            <a class="thumbnail" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
-                <img src="${imgscr}" alt="please wait">
-            </a>
-            <div class="info">
-                <a id="${item}" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
-            </div>
-        </div>
-        </li>`;
+                    <div class="content">
+                        <a class="thumbnail" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
+                            <img src="${imgscr}" alt="please wait">
+                        </a>
+                        <div class="info">
+                            <a id="${item}" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                        </div>
+                    </div>
+                    </li>`;
     }
 
     t.addEventListener("click", () => {
@@ -61,4 +61,3 @@ if (sessionStorage.getItem('lastClicked') === null) {
         element.dispatchEvent(event);
     });
 }
-
