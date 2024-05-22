@@ -26,9 +26,6 @@
                 <li><a>Implementation</a></li>
             </ul>
         </nav>
-        <div id="hamburger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
     </div>
 
     <div id="main1">
@@ -57,35 +54,195 @@
             </ul>
         </section>
         <div class="container">
-            <h1>Array-Based Stack Implementation</h1>
-            <div class="section">
-                <h2>Attributes</h2>
-                <ul>
-                    <li><strong>stack</strong>: The array to hold the stack elements.</li>
-                </ul>
-                <h2>Operations</h2>
+            <div class="left-column">
+                <h1>Array-Based Stack Implementation</h1>
+                <div class="section" style="margin-top: 4.4%;">
+                    <h2>Attributes</h2>
+                    <ul>
+                        <li><strong>stack</strong>: The array to hold the stack elements.</li>
+                        <li><strong>top</strong>: An integer to track the index of the top element.</li>
+                    </ul>
+                    <h2>Operations</h2>
+                    <div class="operation">
+                        <h3>push</h3>
+                        <p>Check if the stack is full (i.e., top equals the size of the array).</p>
+                        <p>If not full, increment top and add the new element at this position.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>pop</h3>
+                        <p>Check if the stack is empty (i.e., top equals -1). If not empty, return the element at top
+                            and
+                            decrement top.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>peek</h3>
+                        <p>Return the element at top without modifying top.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>isEmpty</h3>
+                        <p>Return true if top equals -1, otherwise false.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="right-column">
+                <h1>Linked List-Based Stack Implementation</h1>
+                <div class="section">
+                    <h2>Node Structure</h2>
+                    <ul>
+                        <li><strong>data</strong>: Holds the value of the node.</li>
+                        <li><strong>next</strong>: Pointer to the next node.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Attributes</h2>
+                    <ul>
+                        <li><strong>top</strong>: Pointer to the top node of the stack.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Operations</h2>
+                    <div class="operation">
+                        <h3>push</h3>
+                        <p>Create a new node with the given data.</p>
+                        <p>Set the next of the new node to the current top.</p>
+                        <p>Update top to point to the new node.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>pop</h3>
+                        <p>Check if the stack is empty (i.e., top is None).</p>
+                        <p>If not empty, return the data of the top node and update top to the next node.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>peek</h3>
+                        <p>Return the data of the top node without modifying it.</p>
+                    </div>
+                    <div class="operation">
+                        <h3>isEmpty</h3>
+                        <p>Return true if top is None, otherwise false.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Insert pseudocode heading here -->
+
+        <div class="container2">
+            <!-- <div class="pseudocode-heading">
+                <h1>Pseudocode</h1>
+            </div> -->
+            <div class="left-col">
+                <h1>Array-Based Stack Implementation</h1>
                 <div class="operation">
-                    <h3>push</h3>
-                    <p>Check if the stack is full (i.e., top equals the size of the array).</p>
-                    <p>If not full, increment top and add the new element at this position.</p>
+                    <h3>push()</h3>
+                    <pre>
+                IF top == size - 1 THEN
+                    PRINT "Stack Overflow"
+                    EXIT
+                END IF
+                top = top + 1
+                stack[top] = Val
+                PRINT Val
+                RETURN 
+                                    </pre>
                 </div>
                 <div class="operation">
-                    <h3>pop</h3>
-                    <p>Check if the stack is empty (i.e., top equals -1). If not empty, return the element at top and
-                        decrement top.</p>
+                    <h3>pop()</h3>
+                    <pre>
+                IF top == -1 THEN
+                    PRINT "Stack Underflow"
+                    EXIT
+                END IF
+                                    
+                Val = stack[top]
+                top = top - 1
+                RETURN 
+                                    
+                                    </pre>
                 </div>
                 <div class="operation">
-                    <h3>peek</h3>
-                    <p>Return the element at top without modifying top.</p>
+                    <h3>peek()</h3>
+                    <pre>
+                FUNCTION peek():
+                    IF top == -1 THEN               
+                        PRINT "Stack is empty"
+                        RETURN NULL
+                    ELSE
+                        RETURN stack[top]               
+                    END IF
+                END FUNCTION
+                                    
+                                    </pre>
                 </div>
                 <div class="operation">
-                    <h3>isEmpty</h3>
-                    <p>Return true if top equals -1, otherwise false.</p>
+                    <h3>isEmpty()</h3>
+                    <pre>
+                IF top == -1 THEN
+                    RETURN TRUE
+                ELSE
+                    RETURN FALSE
+                END IF</pre>
+                </div>
+            </div>
+            <div class="right-col">
+                <h1>Linked List-Based Stack Implementation</h1>
+                <div class="operation">
+                    <h3>push()</h3>
+                    <pre>
+                newNode = ALLOCATE_MEMORY()
+                IF newNode == NULL THEN
+                    PRINT "Memory allocation failed"
+                    EXIT
+                END IF
+                                    
+                newNode->data = Val
+                newNode->next = top
+                top = newNode </pre>
+                </div>
+                <div class="operation">
+                    <h3>pop()</h3>
+                    <pre>
+                IF top == NULL THEN
+                    PRINT "Stack Underflow"
+                    EXIT
+                END IF
+                                    
+                temp = top
+                Val = temp->data
+                top = top->next
+                FREE(temp)
+                RETURN Val</pre>
+                </div>
+                <div class="operation">
+                    <h3>peek()</h3>
+                    <pre>
+                FUNCTION peek():
+                    IF top == NULL THEN
+                        PRINT "Stack is empty"
+                        RETURN NULL
+                    ELSE
+                        RETURN top->data
+                    END IF
+                END FUNCTION
+                                    
+                                    </pre>
+                </div>
+                <div class="operation">
+                    <h3>isEmpty()</h3>
+                    <pre>
+                FUNCTION isEmpty():
+                    IF top == NULL THEN
+                        RETURN TRUE
+                    ELSE
+                        RETURN FALSE
+                    END IF
+                END FUNCTION
+                                    
+                                    </pre>
                 </div>
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
 </body>
 
 </html>
