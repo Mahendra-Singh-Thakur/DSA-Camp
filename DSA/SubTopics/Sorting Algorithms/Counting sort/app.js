@@ -1,1 +1,1 @@
-console.logCounting sort
+console.log("Counting sort");

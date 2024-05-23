@@ -1,1 +1,1 @@
-console.logHeap sort
+console.log("Heap sort");

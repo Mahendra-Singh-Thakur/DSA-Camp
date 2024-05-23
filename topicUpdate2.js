@@ -173,7 +173,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem;
     color: #fff;
-    background-color: #34495e;
+    background-color: #263647;
     border-radius: 20px;
     transition: background-color 0.2s ease;
 }
@@ -207,7 +207,7 @@ nav ul li a:hover {
     margin-top: 74px; 
 } */`;
         case 'app.js':
-            return `console.log${topic}`;
+            return `console.log("${topic}");`;
         default:
             return '';
     }

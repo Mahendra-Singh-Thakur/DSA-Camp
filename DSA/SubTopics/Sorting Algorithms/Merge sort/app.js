@@ -1,1 +1,1 @@
-console.logMerge sort
+console.log("Merge sort");

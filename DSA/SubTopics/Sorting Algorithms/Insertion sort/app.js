@@ -1,1 +1,1 @@
-console.logInsertion sort
+console.log("Insertion sort");

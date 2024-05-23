@@ -1,1 +1,1 @@
-console.logQuick sort
+console.log("Quick sort");

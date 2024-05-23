@@ -1,1 +1,1 @@
-console.logBucket sort
+console.log("Bucket sort");

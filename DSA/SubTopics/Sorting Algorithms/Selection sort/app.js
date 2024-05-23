@@ -1,1 +1,1 @@
-console.logSelection sort
+console.log("Selection sort");

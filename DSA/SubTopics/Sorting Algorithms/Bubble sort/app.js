@@ -1,1 +1,1 @@
-console.logBubble sort
+console.log("Bubble sort");
