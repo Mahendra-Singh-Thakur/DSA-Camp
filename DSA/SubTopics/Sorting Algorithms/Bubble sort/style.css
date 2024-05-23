@@ -3,8 +3,6 @@
     margin: 0;
     font-family: 'Bubblegum Sans', sans-serif;
     box-sizing: border-box;
-    /* background-color: black;
-    color: white; */
 }
 
 h1 {
@@ -43,19 +41,24 @@ img {
     margin: 10px;
     font-size: 1.5rem;
 }
+
 #camp:hover {
     animation: campanim 0.5s linear forwards;
 }
 
 @keyframes campanim {
     0% {
-        transform: rotate(0deg); /* Start with no rotation */
+        transform: rotate(0deg);
+        /* Start with no rotation */
     }
+
     100% {
-        transform: rotate(45deg); /* Rotate 45 degrees */
+        transform: rotate(45deg);
+        /* Rotate 45 degrees */
         color: white;
     }
 }
+
 nav {
     margin-left: auto;
     margin-right: 2%;
@@ -98,16 +101,125 @@ nav ul li a:hover {
 
 #main1 {
     width: 100vw;
-    background: linear-gradient(45deg, #a7d6ff, #058aff);
+    background: linear-gradient(135deg, #4b79a1, #283e51);
     padding-top: 65px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* #main2 {
-    width: 100%;
-    height: calc(100% - 60px); 
-    background: linear-gradient(45deg, #a7d6ff, #058aff);
-    margin-top: 74px; 
-} */
+.inmain11 {
+    height: 100vh;
+    padding: 0% 2% 2% 1%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+
+}
+
+#sort-explanation {
+    height: 96%;
+    font-size: 1.1rem;
+    max-width: 55%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    margin: 10px;
+}
+
+#sort-explanation h2 {
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+#sort-explanation p {
+    color: #263647;
+    line-height: 1.6;
+}
+
+#sort-explanation h3 {
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+#sort-explanation ol {
+    padding-left: 20px;
+}
+
+#sort-explanation ol li {
+    color: #263647;
+    line-height: 1.6;
+}
+
+#sort-algorithm {
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    font-size: 1.1rem;
+}
+
+#sort-algorithm h2 {
+    color: #16a085;
+    margin-bottom: 10px;
+}
+
+#sort-algorithm pre {
+    color: #263647;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+#sort-algorithm pre code {
+    font-family: 'Courier New', monospace;
+}
+
+/* Your existing CSS styles */
+
+#sorted-array {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sorted-array div {
+    width: 60%;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #5dc6b1;
+    animation: array-item 1s ease-in-out infinite alternate;
+}
+
+@keyframes array-item {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
