@@ -1,1 +1,1 @@
-Content of app.js
+console.logMerge sort
