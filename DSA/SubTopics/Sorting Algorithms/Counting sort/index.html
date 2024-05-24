@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSACamp</title>
+    <title>DSACamp - Counting Sort</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,16 +24,81 @@
                     <li><i class="fa-solid fa-arrow-right"></i></li>
                     <li><a href="/DSA-Camp/DSA/index.html">Stack</a></li>
                     <li><i class="fa-solid fa-arrow-right"></i></li>
-                    <li><a>Counting sort</a></li>
+                    <li><a>Bubble sort</a></li>
                 </ul>
             </nav>
         </div>
     </section>
-    <div id="main1">
+    <section>
+        <div id="main1">
+            <div class="inmain11">
+                <!-- Explanation Section -->
+                <div id="sort-explanation">
+                    <h2>Counting Sort</h2>
+                    <p>Counting sort is a non-comparison-based sorting algorithm that works by counting the number of occurrences of each unique element in the input array and using arithmetic to determine the position of each element in the sorted output array.</p>
+                    <h3>Steps to Perform Counting Sort:</h3>
+                    <!-- Adjusted steps for Counting Sort -->
+                    <ol>
+                        <li>Find the maximum element in the input array to determine the range of values.</li>
+                        <li>Create a counting array to store the count of each unique element.</li>
+                        <li>Iterate through the input array and update the counting array.</li>
+                        <li>Modify the counting array to store the position of each element in the output array.</li>
+                        <li>Construct the sorted output array based on the counting array.</li>
+                    </ol>
+                    <div id="input">
+                        <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                        <button id="sort-button">Counting Sort</button>
+                    </div>
+                </div>
 
-    </div>
-    <script src="app.js"></script>
-
+                <!-- Algorithm Section -->
+                <div id="sort-algorithm">
+                    <h2 >Counting Sort Algorithm</h2>
+                    <pre>
+        // Input: array - the array to be sorted
+        Procedure countingSort(array)
+            
+            DECLARE n = LENGTH(array) // Length of the array
+            DECLARE maxElement = MAX(array) // Maximum element in 
+                the array
+            
+            // Create a counting array with size maxElement + 1
+            DECLARE countingArray = ARRAY of SIZE (maxElement + 1)
+            
+            // Initialize countingArray with zeros
+            FOR (i = 0) TO maxElement DO
+                countingArray[i] = 0
+            END FOR
+            
+            // Update countingArray with the count of each element
+            FOR (i = 0) TO (n - 1) DO
+                countingArray[array[i]] = countingArray[array[i]] + 1
+            END FOR
+            
+            // Modify countingArray to store the position of each element
+            FOR (i = 1) TO maxElement DO
+                countingArray[i] = countingArray[i] + countingArray[i - 1]
+            END FOR
+            
+            // Construct the sorted output array
+            DECLARE sortedArray = ARRAY of SIZE n
+            FOR (i = n - 1) DOWN TO 0 DO
+                sortedArray[countingArray[array[i]] - 1] = array[i]
+                countingArray[array[i]] = countingArray[array[i]] - 1
+            END FOR
+            
+            // Copy the sorted array to the input array
+            FOR (i = 0) TO (n - 1) DO
+                array[i] = sortedArray[i]
+            END FOR
+        End Procedure
+                    </pre>
+                </div>
+            </div>
+            <div id="sorted-array"></div>
+        </div>
+        <script src="app.js"></script>
+    </section>
 </body>
 
 </html>
