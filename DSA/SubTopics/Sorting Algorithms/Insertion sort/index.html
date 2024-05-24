@@ -14,26 +14,73 @@
 
 <body>
     <section>
-        <div id="navbar">
-            <div id="camp">DSACamp</div>
-            <nav>
-                <ul>
-                    <li><a href="/DSA-Camp/index.html">Home</a></li>
-                    <li><i class="fa-solid fa-arrow-right"></i></li>
-                    <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
-                    <li><i class="fa-solid fa-arrow-right"></i></li>
-                    <li><a href="/DSA-Camp/DSA/index.html">Stack</a></li>
-                    <li><i class="fa-solid fa-arrow-right"></i></li>
-                    <li><a>Insertion sort</a></li>
-                </ul>
-            </nav>
+        <section>
+            <div id="navbar">
+                <div id="camp">DSACamp</div>
+                <nav>
+                    <ul>
+                        <li><a href="/DSA-Camp/index.html">Home</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a href="/DSA-Camp/DSA/index.html">Stack</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a>Insertion Sort</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <div id="main1">
+            <div class="inmain11">
+                <div id="sort-explanation">
+                    <h2>Insertion Sort</h2>
+                    <p>Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a
+                        time. It works by taking one element from the input data and inserting it into the correct
+                        position in the already sorted portion of the array.</p>
+                    <h3>Steps to Perform Insertion Sort:</h3>
+                    <ol>
+                        <li>Start from the second element in the list.</li>
+                        <li>Iterate over each element starting from the second one.</li>
+                        <li>For each element, compare it with the elements to its left and move it to the appropriate
+                            position in the sorted segment.</li>
+                    </ol>
+                    <div id="input">
+                        <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                        <button id="sort-button">Insertion Sort</button>
+                    </div>
+                </div>
+
+                <div id="sort-algorithm">
+                    <h2>Insertion Sort Algorithm</h2>
+                    <pre>
+                        // Input: array - the array to be sorted
+                        Procedure insertionSort(array)
+                            
+                            DECLARE n = LENGTH(array) // Length of the array
+                            DECLARE key, j // Variables for the key and inner loop index
+                            
+                            // Iterate over the array starting from the second element
+                            FOR (i = 1) TO (n - 1) DO
+                                key = array[i] // Current element to be inserted
+                                j = i - 1 // Index of the last sorted element
+                                
+                                // Move elements of array[0..i-1], that are greater than key, to one 
+                                        position ahead of their current position
+                                WHILE (j >= 0 AND array[j] > key) DO
+                                    array[j + 1] = array[j]
+                                    j = j - 1
+                                END WHILE
+                                
+                                array[j + 1] = key // Insert the key element into the sorted segment
+                            END FOR
+                        End Procedure
+                    </pre>
+                </div>
+            </div>
+            <div id="sorted-array"></div>
         </div>
+        <script src="app.js"></script>
     </section>
-    <div id="main1">
-
-    </div>
-    <script src="app.js"></script>
-
 </body>
 
 </html>
