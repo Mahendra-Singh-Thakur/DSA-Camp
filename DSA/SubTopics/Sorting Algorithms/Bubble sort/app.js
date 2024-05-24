@@ -1,8 +1,16 @@
 console.log("Bubble sort");
 let sortedArrayElement = document.getElementById('sorted-array');
-let steps = [];
+let sortButton = document.getElementById('sort-button');
+function getInputArray() {
+    let inputString = document.getElementById('input-array').value.trim();
+    let inputArray = inputString.split(/\s+/);
+    inputArray = inputArray.map(element => parseFloat(element));
+    inputArray = inputArray.filter(element => !isNaN(element));
+    return inputArray;
+}
 
-function bubbleSort(arr) {
+
+function bubbleSort(arr, steps) {
     // Traverse through all elements in the array
     for (let i = 0; i < arr.length - 1; i++) {
         // Last i elements are already sorted, so we don't need to check them
@@ -16,31 +24,57 @@ function bubbleSort(arr) {
                 arr[j + 1] = temp;
 
                 // Print the current state of the array after each swap
-                steps.push(`Swapping ${arr[j]} and ${arr[j + 1]} : ${arr.join(' ')}`);
+                steps.push(`Iteration ${i + 1}: Swapping ${arr[j]} and ${arr[j + 1]} : ${arr.join(' ')}`);
             }
         }
     }
 }
-
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
+    let steps = [];
     steps.push("Original array: " + arr.join(' '));
 
-    bubbleSort(arr);
+    bubbleSort(arr, steps);
 
     steps.push("Sorted array: " + arr.join(' '));
-    console.log(steps);
+    let delay = 0;
+    for (let step of steps) {
+        setTimeout((step) => {
+        let div = document.createElement('div');
+        div.innerHTML = step;
+        let icon = document.createElement('i');
+        icon.className = 'fa-solid fa-angles-down'; // Corrected class name
+        sortedArrayElement.appendChild(icon); // Append the icon
+        sortedArrayElement.appendChild(div);
+        }, delay, step); // Pass 'step' as an argument to setTimeout
+        delay += 500; // Adjust the speed of animation by changing the multiplier
+    }
+
+    // console.log(steps);
 }
 
 main();
 
-// Animate the sorting steps
-let delay = 0;
-for (let step of steps) {
-    setTimeout((step) => {
+sortButton.addEventListener('click', () => {
+    let arr = getInputArray();
+    let steps = [];
+    steps.push("Original array: " + arr.join(' '));
+    console.log(arr.join(' '));
+    bubbleSort(arr, steps);
+    steps.push("Sorted array: " + arr.join(' '));
+    let delay = 0;
+    sortedArrayElement.innerHTML = "";
+    for (let step of steps) {
+        setTimeout((step) => {
         let div = document.createElement('div');
-        div.textContent = step;
+        div.innerHTML = step;
+        let icon = document.createElement('i');
+        icon.className = 'fa-solid fa-angles-down'; // Corrected class name
+        sortedArrayElement.appendChild(icon); // Append the icon
         sortedArrayElement.appendChild(div);
-    }, delay, step); // Pass 'step' as an argument to setTimeout
-    delay += 1000; // Adjust the speed of animation by changing the multiplier
-}
+        }, delay, step); // Pass 'step' as an argument to setTimeout
+        delay += 500; // Adjust the speed of animation by changing the multiplier
+    }
+});
+
+// Animate the sorting steps

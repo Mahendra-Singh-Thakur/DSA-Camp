@@ -120,8 +120,8 @@ nav ul li a:hover {
 }
 
 #sort-explanation {
-    height: 96%;
-    font-size: 1.1rem;
+    height: 92%;
+    font-size: 1.2rem;
     max-width: 55%;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -155,6 +155,49 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+#input {
+    width: 100%;
+    height: 46%;
+    /* border: solid 1px black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* font-size: 0rem; */
+    
+}
+
+
+#input input {
+    font-size: 1.5rem;
+    color: black;
+    border: none;
+    border-bottom: 2px solid #16a085;
+    padding: 5px;
+    width: 50%;
+    /* background-color: none; */
+    /* background-color: rgba(255, 255, 255, 0.9); */
+}
+
+#input input:focus {
+    outline: none;
+}
+
+#input button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #158e78;
+    cursor: pointer;
+}
+
+#input button {
+    font-size: 1.5rem;
+    color: #16a085;
+    border: none;
+    border: 2px solid #16a085;
+    padding: 5px;
+    width: 20%;
+}
+
 #sort-algorithm {
     width: 70%;
     padding: 20px;
@@ -166,7 +209,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin: 20px;
     font-size: 1.1rem;
 }
@@ -204,14 +246,14 @@ nav ul li a:hover {
 
 #sorted-array div {
     width: 60%;
-    margin: 1%;
+    margin: 0.5%;
     padding: 1%;
     border-radius: 5px;
     height: 100%;
     text-align: center;
     font-size: 1.2rem;
     background-color: #5dc6b1;
-    animation: array-item 1s ease-in-out infinite alternate;
+    /* animation: array-item 1s ease-in-out infinite alternate; */
 }
 
 @keyframes array-item {

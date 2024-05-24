@@ -47,21 +47,24 @@
                     <li>Move to the next element and repeat steps 2 and 3 until the end of the list.</li>
                     <li>Repeat steps 1-4 until no more swaps are needed, indicating that the list is sorted.</li>
                 </ol>
+                    <div id="input">
+                        <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                        <button id="sort-button">Bubble Sort</button>
+                </div>
             </div>
             <div id="sort-algorithm">
                 <h2>Bubble Sort Algorithm</h2>
                 <pre>
+                // Input: array - the array to be sorted
                 Procedure bubbleSort(array)
-                    // Description: Sorts an array using the bubble sort algorithm
-                    // Input: array - the array to be sorted
                     
                     DECLARE n = LENGTH(array) // Length of the array
                     DECLARE swapped // Flag to indicate if any elements were swapped
                     
-                    FOR i = 0 TO n - 1 DO
+                    FOR (i = 0) TO (n - 1) DO
                         swapped = FALSE // Reset swapped flag for each pass
                         
-                        FOR j = 0 TO n - i - 1 DO
+                        FOR (j = 0) TO (n - i - 1) DO
                             // Compare adjacent elements and swap if necessary
                             IF array[j] > array[j + 1] THEN
                                 SWAP(array[j], array[j + 1]) // Swap elements
