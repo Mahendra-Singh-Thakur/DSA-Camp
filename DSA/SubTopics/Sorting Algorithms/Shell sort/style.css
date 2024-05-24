@@ -157,7 +157,7 @@ nav ul li a:hover {
 
 #input {
     width: 100%;
-    height: 46%;
+    /* height: ; */
     /* border: solid 1px black; */
     display: flex;
     flex-direction: column;
