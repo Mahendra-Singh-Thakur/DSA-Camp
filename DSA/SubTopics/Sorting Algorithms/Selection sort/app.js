@@ -1,8 +1,6 @@
 console.log("Selection sort");
 let sortedArrayElement = document.getElementById('sorted-array');
 let sortButton = document.getElementById('sort-button');
-
-// Function to retrieve input array
 function getInputArray() {
     let inputString = document.getElementById('input-array').value.trim();
     let inputArray = inputString.split(/\s+/);
@@ -10,8 +8,6 @@ function getInputArray() {
     inputArray = inputArray.filter(element => !isNaN(element));
     return inputArray;
 }
-
-// Selection Sort function
 function selectionSort(arr, steps) {
     let n = arr.length;
     for (let i = 0; i < n - 1; i++) {
@@ -29,15 +25,11 @@ function selectionSort(arr, steps) {
         steps.push(`Iteration ${i + 1}: Select: (${arr[i]}) and Swapping With ((${arr[minIndex]}) Index: (${i})) : ${arr.join(' ')}`);
     }
 }
-
-// Main function
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
-
     selectionSort(arr, steps);
-
     steps.push("Sorted array: " + arr.join(' '));
     let delay = 0;
     for (let step of steps) {
@@ -45,17 +37,14 @@ function main() {
             let div = document.createElement('div');
             div.innerHTML = step;
             let icon = document.createElement('i');
-            icon.className = 'fa-solid fa-angles-down'; // Corrected class name
-            sortedArrayElement.appendChild(icon); // Append the icon
+            icon.className = 'fa-solid fa-angles-down';
+            sortedArrayElement.appendChild(icon);
             sortedArrayElement.appendChild(div);
         }, delay, step);
         delay += 500;
     }
 }
-
 main();
-
-// Event listener for sort button click
 sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
@@ -70,8 +59,8 @@ sortButton.addEventListener('click', () => {
             let div = document.createElement('div');
             div.innerHTML = step;
             let icon = document.createElement('i');
-            icon.className = 'fa-solid fa-angles-down'; // Corrected class name
-            sortedArrayElement.appendChild(icon); // Append the icon
+            icon.className = 'fa-solid fa-angles-down';
+            sortedArrayElement.appendChild(icon);
             sortedArrayElement.appendChild(div);
         }, delay, step);
         delay += 500;

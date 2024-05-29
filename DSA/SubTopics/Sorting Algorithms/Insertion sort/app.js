@@ -1,8 +1,6 @@
 console.log("Insertion sort");
 let sortedArrayElement = document.getElementById('sorted-array');
 let sortButton = document.getElementById('sort-button');
-
-
 function getInputArray() {
     let inputString = document.getElementById('input-array').value.trim();
     let inputArray = inputString.split(/\s+/);
@@ -10,8 +8,6 @@ function getInputArray() {
     inputArray = inputArray.filter(element => !isNaN(element));
     return inputArray;
 }
-
-
 function insertionSort(arr, steps) {
     for (let i = 1; i < arr.length; i++) {
         let key = arr[i];
@@ -24,15 +20,11 @@ function insertionSort(arr, steps) {
         steps.push(`Iteration ${i}: Inserting ${key} into its correct position: ${arr.join(' ')}`);
     }
 }
-
-
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
-
     insertionSort(arr, steps);
-
     steps.push("Sorted array: " + arr.join(' '));
     let delay = 0;
     for (let step of steps) {
@@ -47,10 +39,7 @@ function main() {
         delay += 500;
     }
 }
-
 main();
-
-
 sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
