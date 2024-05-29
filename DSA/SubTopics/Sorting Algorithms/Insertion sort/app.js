@@ -2,7 +2,7 @@ console.log("Insertion sort");
 let sortedArrayElement = document.getElementById('sorted-array');
 let sortButton = document.getElementById('sort-button');
 
-// Function to retrieve input array
+
 function getInputArray() {
     let inputString = document.getElementById('input-array').value.trim();
     let inputArray = inputString.split(/\s+/);
@@ -11,7 +11,7 @@ function getInputArray() {
     return inputArray;
 }
 
-// Insertion Sort function
+
 function insertionSort(arr, steps) {
     for (let i = 1; i < arr.length; i++) {
         let key = arr[i];
@@ -25,7 +25,7 @@ function insertionSort(arr, steps) {
     }
 }
 
-// Main function
+
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
@@ -40,8 +40,8 @@ function main() {
             let div = document.createElement('div');
             div.innerHTML = step;
             let icon = document.createElement('i');
-            icon.className = 'fa-solid fa-angles-down'; // Corrected class name
-            sortedArrayElement.appendChild(icon); // Append the icon
+            icon.className = 'fa-solid fa-angles-down';
+            sortedArrayElement.appendChild(icon);
             sortedArrayElement.appendChild(div);
         }, delay, step);
         delay += 500;
@@ -50,7 +50,7 @@ function main() {
 
 main();
 
-// Event listener for sort button click
+
 sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
@@ -65,8 +65,8 @@ sortButton.addEventListener('click', () => {
             let div = document.createElement('div');
             div.innerHTML = step;
             let icon = document.createElement('i');
-            icon.className = 'fa-solid fa-angles-down'; // Corrected class name
-            sortedArrayElement.appendChild(icon); // Append the icon
+            icon.className = 'fa-solid fa-angles-down';
+            sortedArrayElement.appendChild(icon);
             sortedArrayElement.appendChild(div);
         }, delay, step);
         delay += 500;
