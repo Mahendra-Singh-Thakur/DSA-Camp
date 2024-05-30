@@ -1,8 +1,6 @@
 let list = document.querySelector(".list");
 let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
-let Null = "#";
-let imgscr = "../IMAGES/DSA/logologo.jpg";
 let ul = document.createElement("ul");
 for (let topic of DSA.Topics) {
     let li = document.createElement("li");
@@ -18,7 +16,7 @@ topics.forEach((t) => {
     for (let item of DSA.Modules[t.innerText]) {
         string += `<a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
                         <div class="list-container">
-                            <img class="image" src="${imgscr}">
+                            <img class="image" src="../IMAGES/DSA/logologo.jpg">
                             <li>
                                 <a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
                             </li>

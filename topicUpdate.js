@@ -77,7 +77,7 @@ const generateContent = (topic, fileName) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>DSACamp</title>
+                <title>${topics[topic]}</title>
                 <link rel="stylesheet" href="style.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,19 +88,20 @@ const generateContent = (topic, fileName) => {
             
             <body>
                 <div id="main1">
-                    <div id="navbar">
-                        <img id="logo" src="../IMAGES/Home/logo.png" alt="image">
-                        <div id="camp">CAMP</div>
-                        <nav>
-                            <ul>
-                                <li><a href="../index.html">Home </a></li>
-                                <li> <i class="fa-solid fa-arrow-right"></i></li>
-                                <li><a>${topics[topic]}</a></li>
-                                <li> <i class="fa-solid fa-arrow-right"></i></li>
-                                <li><a id="Topic">Choose Topic</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <section>
+                        <div id="navbar">
+                            <div id="camp">DSACamp</div>
+                            <nav>
+                                <ul>
+                                    <li><a href="../index.html">Home </a></li>
+                                    <li> <i class="fa-solid fa-arrow-right"></i></li>
+                                    <li><a>${topics[topic]}</a></li>
+                                    <li> <i class="fa-solid fa-arrow-right"></i></li>
+                                    <li><a id="Topic">Choose Topic</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
                     <div id="main2">
                         <div id="container1">
                             <h1 id="headingc1">${topics[topic]}:</h1>
@@ -112,13 +113,11 @@ const generateContent = (topic, fileName) => {
                         </div>
                         <div id="container2">
                             <div id="heading">TOPICS :</div>
-                            <ul class="list flex-container ">
+                            <ul class="list flex-container">
                             </ul>
                         </div>
                     </div>
                 </div>
-                </div>
-                </nav>
                 <!-- <img class="boxes" id="box1" src="../IMAGES/New folder/image1.png" alt="image">
                 <img class="boxes" id="box2" src="../IMAGES/New folder/image2.png" alt="image">
                 <img class="boxes" id="box3" src="../IMAGES/New folder/image3.png" alt="image">
@@ -134,6 +133,7 @@ const generateContent = (topic, fileName) => {
                 padding: 0;
                 margin: 0;
                 font-family: Bubblegum Sans;
+                box-sizing: border-box;
             }
             
             h1 {
@@ -151,78 +151,95 @@ const generateContent = (topic, fileName) => {
                 background-repeat: no-repeat;
             }
             
-            #logo {
-                margin-left: 1%;
-                margin-top: 1px;
-                height: 100%;
-                border-radius: 50%;
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-                /* position: relative;  */
+            #navbar {
+                width: 100vw;
+                height: 60px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #101010;
+                padding: 4px;
+                border-bottom: 2px solid #a8a8a8;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
-            
             
             #camp {
                 padding: 4px;
-                position: absolute;
-                top: 23px;
-                /* Position the nav vertically centered */
-                left: 63px;
-                color: white;
-                font-family: sans-serif;
-                background-color: #000000;
-                border-top-right-radius: 40%;
-                border-bottom-right-radius: 40%;
-                display: inline-block;
-            
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.6);
+                color: rgb(0, 0, 0);
+                font-family: 'Bubblegum Sans', cursive;
+                background-color: #16a085;
+                border-radius: 10px;
+                padding: 4px 8px;
+                margin: 10px;
+                font-size: 1.5rem;
             }
             
-            #navbar {
-                height: 60px;
-                position: relative;
-                background-color: rgb(246, 251, 255);
-                padding: 4px;
-                border-bottom: 4px solid black;
-                /* Add relative positioning to establish a containing block for the nav */
+            #camp:hover {
+                animation: campanim 0.5s linear forwards;
+            }
+            
+            @keyframes campanim {
+                0% {
+                    transform: rotate(0deg);
+                }
+            
+                100% {
+                    transform: rotate(45deg);
+                    color: white;
+                }
             }
             
             nav {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            
-            nav ul h1 {
-                text-align: center;
+                margin-left: auto;
+                margin-right: 2%;
             }
             
             nav ul {
                 list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             
             nav ul li {
-                display: inline;
+                margin: 0 10px;
             }
             
             nav ul li a {
-                border-radius: 7px;
                 display: inline-block;
-                margin: 0px 17px;
                 padding: 10px 20px;
                 text-decoration: none;
-                font-size: large;
+                font-size: 1rem;
                 color: #fff;
-                background-color: #000000;
+                background-color: #263647;
+                border-radius: 20px;
+                box-shadow: 0px 0px 1px 1px rgb(196, 196, 196);
+                transition: background-color 0.2s ease;
+            }
+            
+            nav ul li a:hover {
+                background-color: #22ffd3;
+                color: black;
+                cursor: pointer;
+            }
+            
+            nav ul li i {
+                color: white;
             }
             
             nav ul li a:hover {
                 box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.6);
-            
             }
             
             #main2 {
-                width: 100%;
-                height: 91%;
+                width: 100vw;
+                height: 100vh;
+                background-color: #263647;
+                padding-top: 60px;
                 display: flex;
                 justify-content: start;
                 align-items: start;
@@ -232,24 +249,22 @@ const generateContent = (topic, fileName) => {
                 position: sticky;
                 top: 0px;
                 z-index: 1;
-                /* Added z-index */
                 background: linear-gradient(45deg, #232323, #101010);
+                box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 10px 0 rgba(0, 0, 0, 0.6);
                 color: #3688cf;
-                /* Text color */
-                padding: 10px;
-                /* Adjust padding as needed */
+                padding: 5px;
                 text-align: center;
             }
             
             #container1 {
                 width: 24%;
                 height: 100%;
+                border-right: solid 2px black;
                 background: linear-gradient(45deg, #474747, #101010);
                 display: flex;
                 flex-direction: column;
-                /* Stack elements vertically */
                 overflow: auto;
-                /* Enable vertical scrolling */
+                color: rgb(255, 255, 255);
             }
             
             .active {
@@ -260,104 +275,122 @@ const generateContent = (topic, fileName) => {
             
             #container1 ul {
                 padding: 0;
-                /* Remove default padding */
                 margin: 0;
-                /* Remove default margin */
-                color: rgb(255, 255, 255);
-                font-size: 19px;
             }
             
             #container1 ul li {
-                padding: 25px;
+                padding: 15px 22px;
                 display: block;
+                font-size: 22px;
                 text-align: center;
-                /* Center text within li */
             }
             
-            #container1 ul li a:hover {
+            #container1 ul li:hover {
+                color: rgb(255, 255, 87);
+                font-size: 24px;
                 cursor: pointer;
-                color: rgb(255, 255, 169);
-                /* color: rgb(185, 185, 185); */
-                font-size: 21px;
             }
             
             #container1 ul li a {
                 display: block;
                 padding: 5px;
+                border-radius: 6px;
+                box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 10px 0 rgba(0, 0, 0, 0.6);
                 color: inherit;
                 text-decoration: none;
             }
             
+            #container1 ul li li {
+                padding: 0px;
+            }
+            
+            #container1 ul li li:hover {
+                color: white;
+                cursor: default;
+            }
+            
             #container1 ul li li a:hover {
-                cursor: grab;
+                color: gold;
+                box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.6), 0 6px 10px 0 rgba(0, 0, 0, 0.6);
+                font-size: 20px;
+                cursor: pointer;
             }
             
             #container1 ul li li a {
-                margin-left: 20%;
+                margin-top: 4PX;
+                margin-left: 15%;
                 text-align: start;
-                font-size: 15px;
-                list-style-type: disc;
+                font-size: 18px;
             }
             
-            
             #container2 {
-                /* margin: 6px; */
                 width: 100%;
                 height: 100%;
-                background-color: rgb(246, 251, 255);
-                /* background: linear-gradient(45deg, #a7d6ff, #058aff); */
+                background: linear-gradient(to top, #474747, #1a1a1a);
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                align-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
                 overflow: auto;
             }
             
-            #container2 .list {
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
+            #heading {
+                font-size: 35px;
+                background-color: inherit;
+                text-decoration: none;
+                display: block;
+                color: #43a7ff;
+                box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+                padding: 0px 14px;
+                border: solid 1px #808080;
+                border-radius: 8px;
+                margin: 1% 0%;
+            }
+            
+            .image {
+                width: 100%;
+                border-radius: 4px;
+            }
+            
+            .image:hover {
+                opacity: 0.9;
+                transition: 0.3s;
+            }
+            
+            .flex-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-            }
-            
-            #container2 .list li {
-                width: 23%;
-                /* 33.33% width for each column with 20px margin */
-                margin: 40px;
-                /* Adjust margin as needed */
-                text-align: center;
-            }
-            
-            #container2 .list li .content:hover {
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-                background-color: #f0ffff;
-            }
-            
-            #container2 .list li .content {
-                border: 2px solid #000000;
-                /* Example border style */
                 list-style-type: none;
-                border-radius: 7px;
+            }
+            
+            .list-container {
+                width: 23%;
+                margin: 4.2%;
+                padding: 0.5%;
+                border-radius: 8px;
+                text-align: center;
+                background-color: #b6b6b6;
+                box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.6);
+                border: 3px solid black;
+            }
+            
+            .list-container li {
                 padding: 10px;
-                /* Example padding */
             }
             
-            #container2 .list li .content .thumbnail img {
-                border-radius: 5px;
-                max-width: 100%;
-            }
-            
-            
-            #container2 .list li .content .info {
-                margin-top: 10px;
-            }
-            
-            #container2 .list li a {
+            .list-container li a {
+                color: #000000;
                 text-decoration: none;
-                color: rgb(53, 53, 255);
-                font-size: 23px;
+                font-size: 19px;
+            }
+            
+            .list-container li a:hover {
+                font-size: 18px;
+            }
+            
+            .list-container:hover {
+                box-shadow: 0px 4px 12px 12px rgba(0, 0, 0, 0.6);
+                transform: scale(1.02);
             }
             
             .boxes {
@@ -370,7 +403,6 @@ const generateContent = (topic, fileName) => {
                 position: fixed;
                 left: 0px;
                 top: 0px;
-                /* background-color: aqua; */
                 animation: box1animation 3s ease-in-out 2s forwards;
             }
             
@@ -378,7 +410,6 @@ const generateContent = (topic, fileName) => {
                 position: fixed;
                 right: 0px;
                 top: 0px;
-                /* background-color: bisque; */
                 animation: box2animation 3s ease-in-out 2s forwards;
             }
             
@@ -386,7 +417,6 @@ const generateContent = (topic, fileName) => {
                 position: fixed;
                 left: 0px;
                 bottom: 0px;
-                /* background-color: blueviolet; */
                 animation: box3animation 3s ease-in-out 2s forwards;
             }
             
@@ -394,7 +424,6 @@ const generateContent = (topic, fileName) => {
                 position: fixed;
                 right: 0px;
                 bottom: 0px;
-                /* background-color: yellow; */
                 animation: box4animation 3s ease-in-out 2s forwards;
             }
             
@@ -410,7 +439,6 @@ const generateContent = (topic, fileName) => {
                     border-bottom-right-radius: 30%;
                 }
             }
-            
             
             @keyframes box2animation {
                 0% {
@@ -429,7 +457,6 @@ const generateContent = (topic, fileName) => {
                 0% {
                     width: 50%;
                     height: 50%;
-            
                 }
             
                 100% {
@@ -438,7 +465,6 @@ const generateContent = (topic, fileName) => {
                     border-top-right-radius: 30%;
                 }
             }
-            
             
             @keyframes box4animation {
                 0% {
@@ -461,17 +487,14 @@ const generateContent = (topic, fileName) => {
             ::-webkit-scrollbar-thumb {
                 background-color: #fafafa;
                 border: solid 1px black;
-            
                 border-radius: 10px;
             }`;
         case 'app.js':
             return `let list = document.querySelector(".list");
             let Topic = document.querySelector("#Topic");
             let subtopics = document.querySelector("#subtopics");
-            let Null = "#";
-            let imgscr = "../IMAGES/${topic}/logologo.jpg";
             let ul = document.createElement("ul");
-            for (let topic of ${topic}.Topics) {
+            for (let topic of DSA.Topics) {
                 let li = document.createElement("li");
                 li.setAttribute("class", "topics");
                 li.setAttribute("id", topic);
@@ -482,19 +505,17 @@ const generateContent = (topic, fileName) => {
             let topics = document.querySelectorAll(".topics");
             topics.forEach((t) => {
                 let string = "";
-                for (let item of ${topic}.Modules[t.innerText]) {
-                    string += \`<li id="\${item}">
-                    <div class="content">
-                        <a class="thumbnail" href="../${topic}/SubTopics/\${t.innerText}/\${item}/index.html">
-                            <img src="\${imgscr}" alt="please wait">
-                        </a>
-                        <div class="info">
-                            <a id="\${item}" href="../${topic}/SubTopics/\${t.innerText}/\${item}/index.html">\${item}</a>
-                        </div>
-                    </div>
-                    </li>\`;
+                for (let item of DSA.Modules[t.innerText]) {
+                    string += \`<a href="../DSA/SubTopics/\${t.innerText}/\${item}/index.html">
+                                    <div class="list-container">
+                                        <img class="image" src="../IMAGES/DSA/logologo.jpg">
+                                        <li>
+                                            <a href="../DSA/SubTopics/\${t.innerText}/\${item}/index.html">\${item}</a>
+                                        </li>
+                                    </div>
+                                </a>\`;
                 }
-            
+
                 t.addEventListener("click", () => {
                     // console.log(t.innerText);
                     Topic.innerHTML = t.innerText;
