@@ -41,10 +41,10 @@ const fs = require('fs');
 const path = require('path');
 
 // Define the root directory path where you want to update the folders
-const rootDirectoryPath = '/Git hub/DSA-Camp/DSA/SubTopics/Array/';
+const rootDirectoryPath = '/Git hub/DSA-Camp/DSA/SubTopics/Searching Alogrithms/';
 // DSA-Camp\DSA\SubTopics\Sorting Algorithms\Bubble sort
 // Define the Topics array
-const topics = ["Insertion", "Deletion", "Updating", "Splitting", "Concatenation", "Filtering"];
+const topics = ["Linear search", "Binary search"];
 
 // Define the file names to be updated in each topic folder
 const fileNames = ['index.html', 'style.css', 'app.js'];

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSACamp</title>
+    <title>DSACamp - Binary search</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +13,102 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <img id="logo" src="/DSA-Camp/IMAGES/Home/logo.png" alt="image">
-        <div id="camp">CAMP</div>
-        <nav>
-            <ul>
-                <li><a href="/DSA-Camp/index.html">Home</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="/DSA-Camp/DSA/index.html">Searching Alogrithms</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a>Binary search</a></li>
-            </ul>
-        </nav>
-    </div>
+    <section>
+        <div id="binary-search-navbar">
+            <div id="camp">DSACamp</div>
+            <nav>
+                <ul>
+                    <li><a href="/DSA-Camp/index.html">Home</a></li>
+                    <li><i class="fa-solid fa-arrow-right"></i></li>
+                    <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
+                    <li><i class="fa-solid fa-arrow-right"></i></li>
+                    <li><a href="/DSA-Camp/DSA/index.html">Array</a></li>
+                    <li><i class="fa-solid fa-arrow-right"></i></li>
+                    <li><a>Binary search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <div id="binary-search-main">
+        <h1>Binary search</h1>
+        <div class="inmain11">
+            <div id="binary-search-explanation">
+                <h2>Binary Search</h2>
+                <p>Binary search is an efficient search algorithm that is used to find a specific element within a
+                    sorted array or list. It works by repeatedly dividing the search interval in half until the target
+                    element is found or the interval is empty.</p>
 
-    <div id="main1">
-        
+                <h3>Steps to Perform Binary Search:</h3>
+                <ol>
+                    <li>Initialize two pointers, left and right, to the first and last elements of the array,
+                        respectively.</li>
+                    <li>While the left pointer is less than or equal to the right pointer:</li>
+                    <ul>
+                        <li>Calculate the middle index of the current interval as the average of the left and right
+                            pointers.</li>
+                        <li>If the target element is equal to the middle element, return the index of the middle
+                            element.</li>
+                        <li>If the target element is less than the middle element, update the right pointer to mid - 1.
+                        </li>
+                        <li>If the target element is greater than the middle element, update the left pointer to mid +
+                            1.</li>
+                    </ul>
+                    <li>If the target element is not found after the loop, return a sentinel value indicating that the
+                        element is not present in the array.</li>
+                </ol>
+
+                <h3>Time Complexity:</h3>
+                <p>
+                    Binary Search has a time complexity of O(log n), where n is the number of elements in the array.
+                    This time complexity arises from the fact that the search space is halved in each iteration of the
+                    algorithm. As a result, Binary Search is highly efficient, especially for large datasets.
+                </p>
+
+                <h3>Space Complexity:</h3>
+                <p>
+                    Binary Search has a space complexity of O(1), indicating constant space usage. This is because the
+                    algorithm does not require additional space beyond a few variables used for storing indices and
+                    temporary values. Thus, Binary Search is efficient in terms of memory usage as well.
+                </p>
+                <div id="binary-search-input">
+                    <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                    <button id="search-button">Search</button>
+                </div>
+            </div>
+            <div id="binary-search-algorithm">
+                <h2>Binary Search Algorithm</h2>
+                <pre>
+// Input: sortedArray - the array to be searched
+//        target - the element to search for
+Procedure binarySearch(sortedArray, target)
+
+    DECLARE left = 0 // Leftmost index of the array
+    DECLARE right = LENGTH(sortedArray) - 1 // Rightmost index of the array
+
+    WHILE left <= right DO
+        DECLARE mid = left + (right - left) / 2 // Calculate the middle index
+
+        // If the target is found at the middle
+        IF sortedArray[mid] = target THEN
+            RETURN mid // Return the index of the target
+        // If the target is in the left half of the array
+        ELSE IF sortedArray[mid] > target THEN
+            right = mid - 1 // Update the right boundary
+        // If the target is in the right half of the array
+        ELSE
+            left = mid + 1 // Update the left boundary
+        END IF
+    END WHILE
+
+    // If the target is not found in the array
+    RETURN -1 // Return a sentinel value indicating the target is not found
+End Procedure
+</pre>
+            </div>
+        </div>
+        <div id="display-array"></div>
     </div>
     <script src="app.js"></script>
-
 </body>
 
 </html>

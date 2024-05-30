@@ -215,7 +215,7 @@ nav ul li a {
     color: #fff;
     background-color: #263647;
     border-radius: 20px;
-    box-shadow: 0px 0px 1px 1px rgb(196, 196, 196);
+    box-shadow: 0px 0px 1px 1px #16a085;
     transition: background-color 0.2s ease;
 }
 
