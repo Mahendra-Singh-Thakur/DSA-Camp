@@ -1,8 +1,7 @@
+console.log("");
 let list = document.querySelector(".list");
 let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
-let Null = "#";
-let imgscr = "../IMAGES/COA/logologo.jpg";
 let ul = document.createElement("ul");
 for (let topic of COA.Topics) {
     let li = document.createElement("li");
@@ -16,18 +15,15 @@ let topics = document.querySelectorAll(".topics");
 topics.forEach((t) => {
     let string = "";
     for (let item of COA.Modules[t.innerText]) {
-        string += `<li id="${item}">
-                    <div class="content">
-                        <a class="thumbnail" href="../COA/SubTopics/${t.innerText}/${item}/index.html">
-                            <img src="${imgscr}" alt="please wait">
-                        </a>
-                        <div class="info">
-                            <a id="${item}" href="../COA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+        string += `<a href="../COA/SubTopics/${t.innerText}/${item}/index.html">
+                        <div class="list-container">
+                            <img class="image" src="../IMAGES/COA/logologo.jpg">
+                            <li>
+                                <a href="../COA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                            </li>
                         </div>
-                    </div>
-                    </li>`;
+                    </a>`;
     }
-
     t.addEventListener("click", () => {
         // console.log(t.innerText);
         Topic.innerHTML = t.innerText;

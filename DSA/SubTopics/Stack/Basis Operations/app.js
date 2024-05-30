@@ -35,25 +35,35 @@ document.getElementById('pushBtn').addEventListener('click', () => {
     if (value.trim() === '') {
         alert('Cannot push an empty value');
     } else {
-        stack.push(value);
-        let li = document.createElement('li');
-        li.setAttribute("class", 'ele');
-        li.textContent = value;
-        STACK.prepend(li);
-        document.getElementById('pushValue').value = '';
-    }
-});
-document.getElementById('pushValue').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        const value = this.value.trim();
-        if (value !== '') {
+        if (stack.size() <= 11) {
             stack.push(value);
             let li = document.createElement('li');
             li.setAttribute("class", 'ele');
             li.textContent = value;
             STACK.prepend(li);
             document.getElementById('pushValue').value = '';
-            this.value = '';
+        }
+        else {
+            alert('Cannot push Stack is Full');
+        }
+    }
+});
+document.getElementById('pushValue').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        const value = this.value.trim();
+        if (value !== '') {
+            if (stack.size() <= 11) {
+                stack.push(value);
+                let li = document.createElement('li');
+                li.setAttribute("class", 'ele');
+                li.textContent = value;
+                STACK.prepend(li);
+                document.getElementById('pushValue').value = '';
+                this.value = '';
+            }
+            else {
+                alert('Cannot push Stack is Full');
+            }
         }
         else {
             alert('Cannot push an empty value');

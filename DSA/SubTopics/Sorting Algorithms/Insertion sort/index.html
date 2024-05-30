@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSACamp</title>
+    <title>DSACamp - Insertion Sort</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,27 +13,100 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <img id="logo" src="/DSA-Camp/IMAGES/Home/logo.png" alt="image">
-        <div id="camp">CAMP</div>
-        <nav>
-            <ul>
-                <li><a href="/DSA-Camp/index.html">Home</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a href="/DSA-Camp/DSA/index.html">Sorting Algorithms</a></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-                <li><a>Insertion sort</a></li>
-            </ul>
-        </nav>
-    </div>
+    <section>
+        <section>
+            <div id="navbar">
+                <div id="camp">DSACamp</div>
+                <nav>
+                    <ul>
+                        <li><a href="/DSA-Camp/index.html">Home</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a href="/DSA-Camp/DSA/index.html">Data Structures &amp; Algorithms</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a href="/DSA-Camp/DSA/index.html">Stack</a></li>
+                        <li><i class="fa-solid fa-arrow-right"></i></li>
+                        <li><a>Insertion Sort</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <div id="main1">
+            <div class="inmain11">
+                <div id="sort-explanation">
+                    <h2>Insertion Sort</h2>
+                    <p>Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a
+                        time. It works by taking one element from the input data and inserting it into the correct
+                        position in the already sorted portion of the array.</p>
+                    <h3>Steps to Perform Insertion Sort:</h3>
+                    <ol>
+                        <li>Start from the second element in the list.</li>
+                        <li>Iterate over each element starting from the second one.</li>
+                        <li>For each element, compare it with the elements to its left and move it to the appropriate
+                            position in the sorted segment.</li>
+                    </ol>
+                    <h3>Time Complexity:</h3>
+                    <p>
+                        Insertion sort is a simple comparison-based sorting algorithm that builds the final sorted array
+                        one element at a time. It repeatedly takes an element from the unsorted part of the array and
+                        inserts it into its correct position in the sorted part of the array.
+                        <br><br>
+                        The time complexity of insertion sort is O(n^2) in the worst-case scenario, where n is the
+                        number of elements in the input array. This worst-case time complexity occurs when the input
+                        array is in reverse sorted order, and each element must be compared and moved to its correct
+                        position in the sorted array.
+                        <br><br>
+                        However, in the best-case scenario, where the input array is already sorted, insertion sort has
+                        a time complexity of O(n). This best-case time complexity occurs because each element is already
+                        in its correct position and no element needs to be moved.
+                        <br><br>
+                        In average cases, insertion sort also has a time complexity of O(n^2), making it inefficient for
+                        large datasets.
+                    </p>
 
-    <div id="main1">
-        
-    </div>
-    <script src="app.js"></script>
+                    <h3>Space Complexity:</h3>
+                    <p>
+                        Insertion sort is an in-place sorting algorithm, meaning it doesn't require additional space
+                        beyond the input array itself. Therefore, the space complexity of insertion sort is O(1),
+                        indicating constant space usage, regardless of the size of the input array.
+                    </p>
 
+                    <div id="input">
+                        <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                        <button id="sort-button">Insertion Sort</button>
+                    </div>
+                </div>
+
+                <div id="sort-algorithm">
+                    <h2>Insertion Sort Algorithm</h2>
+                    <pre>
+                        // Input: array - the array to be sorted
+                        Procedure insertionSort(array)
+
+                            DECLARE n = LENGTH(array) // Length of the array
+                            DECLARE key, j // Variables for the key and inner loop index
+
+                            // Iterate over the array starting from the second element
+                            FOR (i = 1) TO (n - 1) DO
+                                key = array[i] // Current element to be inserted
+                                j = i - 1 // Index of the last sorted element
+
+                                // Move elements of array[0..i-1], that are greater than key, to one
+                                        position ahead of their current position
+                                WHILE (j >= 0 AND array[j] > key) DO
+                                    array[j + 1] = array[j]
+                                    j = j - 1
+                                END WHILE
+
+                                array[j + 1] = key // Insert the key element into the sorted segment
+                            END FOR
+                        End Procedure
+                    </pre>
+                </div>
+            </div>
+            <div id="sorted-array"></div>
+        </div>
+        <script src="app.js"></script>
+    </section>
 </body>
 
 </html>

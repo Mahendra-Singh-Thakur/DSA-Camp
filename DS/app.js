@@ -3,7 +3,7 @@ let list = document.querySelector(".list");
 let Topic = document.querySelector("#Topic");
 let subtopics = document.querySelector("#subtopics");
 let ul = document.createElement("ul");
-for (let topic of ADA.Topics) {
+for (let topic of DS.Topics) {
     let li = document.createElement("li");
     li.setAttribute("class", "topics");
     li.setAttribute("id", topic);
@@ -14,12 +14,12 @@ subtopics.appendChild(ul);
 let topics = document.querySelectorAll(".topics");
 topics.forEach((t) => {
     let string = "";
-    for (let item of ADA.Modules[t.innerText]) {
-        string += `<a href="../ADA/SubTopics/${t.innerText}/${item}/index.html">
+    for (let item of DS.Modules[t.innerText]) {
+        string += `<a href="../DS/SubTopics/${t.innerText}/${item}/index.html">
                         <div class="list-container">
-                            <img class="image" src="../IMAGES/ADA/logologo.jpg">
+                            <img class="image" src="../IMAGES/DS/logologo.jpg">
                             <li>
-                                <a href="../ADA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                                <a href="../DS/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
                             </li>
                         </div>
                     </a>`;
