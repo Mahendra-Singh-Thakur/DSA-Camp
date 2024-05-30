@@ -23,13 +23,13 @@ function shellSort(arr, steps) {
         steps.push(`Gap ${gap}: ${arr.join(' ')}`);
         gap = Math.floor(gap / 2);
     }
+    steps.push("Sorted array: " + arr.join(' '));
 }
 function main() {
     let arr = [9, 6, 35, 14, 13, 42, 11, 10, 5, 21, 4, 3, 22, 8, 7, 11, 1];
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
     shellSort(arr, steps);
-    steps.push("Sorted array: " + arr.join(' '));
     let delay = 0;
     for (let step of steps) {
         setTimeout((step) => {

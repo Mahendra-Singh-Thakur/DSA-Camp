@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSACamp</title>
+    <title>DSACamp - Bubble Sort</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +47,32 @@
                     <li>Move to the next element and repeat steps 2 and 3 until the end of the list.</li>
                     <li>Repeat steps 1-4 until no more swaps are needed, indicating that the list is sorted.</li>
                 </ol>
-                    <div id="input">
-                        <input type="text" id="input-array" placeholder="Enter array elements separated by space">
-                        <button id="sort-button">Bubble Sort</button>
+                <h3>Time Complexity:</h3>
+                <p>
+                    Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent
+                    elements, and swaps them if they are in the wrong order. In the worst-case scenario, where the input
+                    array is in reverse order, bubble sort will require O(n^2) comparisons and swaps, where n is the
+                    number of elements in the array. This worst-case time complexity occurs because, in each pass
+                    through the array, the algorithm may need to perform a swap for every pair of adjacent elements.
+                    <br><br>
+                    In the best-case scenario, where the input array is already sorted, bubble sort will require O(n)
+                    comparisons. However, even in the best case, it will still require O(n^2) swaps because it needs to
+                    move the largest element to its correct position in each pass through the array.
+                    <br><br>
+                    The average-case time complexity of bubble sort is also O(n^2), making it inefficient for large
+                    datasets.
+                </p>
+
+                <h3>Space Complexity:</h3>
+                <p>
+                    Bubble sort is an in-place sorting algorithm, meaning it doesn't require any extra space beyond the
+                    array being sorted. Therefore, the space complexity of bubble sort is O(1), indicating constant
+                    space usage, regardless of the size of the input array.
+                </p>
+
+                <div id="input">
+                    <input type="text" id="input-array" placeholder="Enter array elements separated by space">
+                    <button id="sort-button">Bubble Sort</button>
                 </div>
             </div>
             <div id="sort-algorithm">
@@ -57,13 +80,13 @@
                 <pre>
                 // Input: array - the array to be sorted
                 Procedure bubbleSort(array)
-                    
+
                     DECLARE n = LENGTH(array) // Length of the array
                     DECLARE swapped // Flag to indicate if any elements were swapped
-                    
+
                     FOR (i = 0) TO (n - 1) DO
                         swapped = FALSE // Reset swapped flag for each pass
-                        
+
                         FOR (j = 0) TO (n - i - 1) DO
                             // Compare adjacent elements and swap if necessary
                             IF array[j] > array[j + 1] THEN
@@ -71,7 +94,7 @@
                                 swapped = TRUE // Set swapped flag to true
                             END IF
                         END FOR
-                        
+
                         // If no elements were swapped, the array is already sorted
                         IF NOT swapped THEN
                             BREAK // Exit the outer loop

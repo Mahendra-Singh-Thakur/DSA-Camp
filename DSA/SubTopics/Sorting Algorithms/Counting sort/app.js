@@ -73,12 +73,14 @@ function main() {
     steps.push('Sorted Array : ' + arr.join(' ') + `<p>Sorted Index : ${indstr}</p>`);
     let delay = 0;
     for (let step of steps) {
-        let div = document.createElement('div');
-        div.innerHTML = step;
-        let icon = document.createElement('i');
-        icon.className = 'fa-solid fa-angles-down';
-        sortedArrayElement.appendChild(icon);
-        sortedArrayElement.appendChild(div);
+        setTimeout((step) => {
+            let div = document.createElement('div');
+            div.innerHTML = step;
+            let icon = document.createElement('i');
+            icon.className = 'fa-solid fa-angles-down';
+            sortedArrayElement.appendChild(icon);
+            sortedArrayElement.appendChild(div);
+        }, delay, step);
         delay += 500;
     }
 }

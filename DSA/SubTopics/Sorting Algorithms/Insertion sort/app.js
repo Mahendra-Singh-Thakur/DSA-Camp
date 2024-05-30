@@ -19,13 +19,13 @@ function insertionSort(arr, steps) {
         arr[j + 1] = key;
         steps.push(`Iteration ${i}: Inserting ${key} into its correct position: ${arr.join(' ')}`);
     }
+    steps.push("Sorted array: " + arr.join(' '));
 }
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
     insertionSort(arr, steps);
-    steps.push("Sorted array: " + arr.join(' '));
     let delay = 0;
     for (let step of steps) {
         setTimeout((step) => {

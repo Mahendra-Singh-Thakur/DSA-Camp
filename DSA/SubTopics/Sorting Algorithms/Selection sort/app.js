@@ -24,13 +24,13 @@ function selectionSort(arr, steps) {
         }
         steps.push(`Iteration ${i + 1}: Select: (${arr[i]}) and Swapping With ((${arr[minIndex]}) Index: (${i})) : ${arr.join(' ')}`);
     }
+    steps.push("Sorted array: " + arr.join(' '));
 }
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
     selectionSort(arr, steps);
-    steps.push("Sorted array: " + arr.join(' '));
     let delay = 0;
     for (let step of steps) {
         setTimeout((step) => {

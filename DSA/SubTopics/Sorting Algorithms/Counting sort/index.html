@@ -24,7 +24,7 @@
                     <li><i class="fa-solid fa-arrow-right"></i></li>
                     <li><a href="/DSA-Camp/DSA/index.html">Stack</a></li>
                     <li><i class="fa-solid fa-arrow-right"></i></li>
-                    <li><a>Bubble sort</a></li>
+                    <li><a>Counting Sort</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +35,9 @@
                 <!-- Explanation Section -->
                 <div id="sort-explanation">
                     <h2>Counting Sort</h2>
-                    <p>Counting sort is a non-comparison-based sorting algorithm that works by counting the number of occurrences of each unique element in the input array and using arithmetic to determine the position of each element in the sorted output array.</p>
+                    <p>Counting sort is a non-comparison-based sorting algorithm that works by counting the number of
+                        occurrences of each unique element in the input array and using arithmetic to determine the
+                        position of each element in the sorted output array.</p>
                     <h3>Steps to Perform Counting Sort:</h3>
                     <!-- Adjusted steps for Counting Sort -->
                     <ol>
@@ -45,6 +47,32 @@
                         <li>Modify the counting array to store the position of each element in the output array.</li>
                         <li>Construct the sorted output array based on the counting array.</li>
                     </ol>
+                    <h3>Time Complexity:</h3>
+                    <p>
+                        Counting sort is a non-comparison-based sorting algorithm that sorts elements by counting the
+                        number of occurrences of each unique element in the input array. It operates by determining, for
+                        each element in the input array, the number of elements that are less than it.
+                        <br><br>
+                        The time complexity of counting sort is O(n + k), where n is the number of elements in the input
+                        array and k is the range of the input (the difference between the maximum and minimum values).
+                        This time complexity assumes that the range of input values is not significantly greater than
+                        the number of elements.
+                        <br><br>
+                        Counting sort is efficient when the range of input values is relatively small compared to the
+                        number of elements. However, it becomes less practical when the range of input values is large
+                        or unbounded.
+                    </p>
+
+                    <h3>Space Complexity:</h3>
+                    <p>
+                        The space complexity of counting sort depends on the range of input values. It requires
+                        additional space proportional to the range of input values, which is O(k), where k is the range.
+                        Additionally, it requires space for the output array, which is O(n), where n is the number of
+                        elements in the input array.
+                        <br><br>
+                        Therefore, the overall space complexity of counting sort is O(n + k).
+                    </p>
+
                     <div id="input">
                         <input type="text" id="input-array" placeholder="Enter array elements separated by space">
                         <button id="sort-button">Counting Sort</button>
@@ -53,40 +81,40 @@
 
                 <!-- Algorithm Section -->
                 <div id="sort-algorithm">
-                    <h2 >Counting Sort Algorithm</h2>
+                    <h2>Counting Sort Algorithm</h2>
                     <pre>
         // Input: array - the array to be sorted
         Procedure countingSort(array)
-            
+
             DECLARE n = LENGTH(array) // Length of the array
-            DECLARE maxElement = MAX(array) // Maximum element in 
+            DECLARE maxElement = MAX(array) // Maximum element in
                 the array
-            
+
             // Create a counting array with size maxElement + 1
             DECLARE countingArray = ARRAY of SIZE (maxElement + 1)
-            
+
             // Initialize countingArray with zeros
             FOR (i = 0) TO maxElement DO
                 countingArray[i] = 0
             END FOR
-            
+
             // Update countingArray with the count of each element
             FOR (i = 0) TO (n - 1) DO
                 countingArray[array[i]] = countingArray[array[i]] + 1
             END FOR
-            
+
             // Modify countingArray to store the position of each element
             FOR (i = 1) TO maxElement DO
                 countingArray[i] = countingArray[i] + countingArray[i - 1]
             END FOR
-            
+
             // Construct the sorted output array
             DECLARE sortedArray = ARRAY of SIZE n
             FOR (i = n - 1) DOWN TO 0 DO
                 sortedArray[countingArray[array[i]] - 1] = array[i]
                 countingArray[array[i]] = countingArray[array[i]] - 1
             END FOR
-            
+
             // Copy the sorted array to the input array
             FOR (i = 0) TO (n - 1) DO
                 array[i] = sortedArray[i]

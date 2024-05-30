@@ -1,12 +1,16 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Bubblegum Sans', sans-serif;
+    font-family: Bubblegum Sans;
     box-sizing: border-box;
 }
 
 h1 {
     color: rgb(96, 236, 255);
+}
+
+#main1 {
+    width: 100vw;
 }
 
 img {
@@ -21,9 +25,9 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #45525e;
+    background-color: #101010;
     padding: 4px;
-    border-bottom: 3px solid #2b3d4f;
+    border-bottom: 2px solid #a8a8a8;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -81,16 +85,18 @@ nav ul li a {
     color: #fff;
     background-color: #263647;
     border-radius: 20px;
+    box-shadow: 0px 0px 1px 1px rgb(196, 196, 196);
     transition: background-color 0.2s ease;
 }
 
 nav ul li a:hover {
-    background-color: #16a085;
+    background-color: #22ffd3;
     color: black;
+    cursor: pointer;
 }
 
 nav ul li i {
-    color: #fff;
+    color: white;
 }
 
 nav ul li a:hover {
@@ -108,15 +114,15 @@ nav ul li a:hover {
 }
 
 .inmain11 {
-    height: 100vh;
     padding: 0% 2% 2% 1%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #sort-explanation {
-    height: 92%;
+
     font-size: 1.2rem;
     max-width: 55%;
     padding: 20px;
@@ -152,12 +158,17 @@ nav ul li a:hover {
 }
 
 #input {
-    width: 100%;
+
+
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+
 }
+
 
 #input input {
     font-size: 1.5rem;
@@ -165,7 +176,10 @@ nav ul li a:hover {
     border: none;
     border-bottom: 2px solid #16a085;
     padding: 5px;
+    margin: 5% 0%;
     width: 50%;
+
+
 }
 
 #input input:focus {
@@ -218,6 +232,8 @@ nav ul li a:hover {
     font-family: 'Courier New', monospace;
 }
 
+
+
 #sorted-array {
     width: 80%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -230,6 +246,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
+
 #sorted-array div {
     width: 60%;
     margin: 0.5%;
@@ -239,6 +256,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.2rem;
     background-color: #5dc6b1;
+
 }
 
 @keyframes array-item {
