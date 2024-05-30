@@ -104,7 +104,7 @@ nav ul li a:hover {
 }
 #main1 {
     width: 100vw;
-    background: linear-gradient(135deg, #4b79a1, #283e51);
+    background: linear-gradient(to bottom, #4b79a1, #283e51);
     padding-top: 65px;
     display: flex;
     flex-direction: column;
