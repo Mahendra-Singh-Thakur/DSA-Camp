@@ -111,7 +111,8 @@ const generateContent = (topic, fileName) => {
                             </div>
                         </div>
                         <div id="container2">
-                            <ul class="list" style="width: 100%;">
+                            <div id="heading">TOPICS :</div>
+                            <ul class="list flex-container ">
                             </ul>
                         </div>
                     </div>
@@ -559,6 +560,3 @@ for (let topic in topics) {
         }
     });
 };
-
-
-

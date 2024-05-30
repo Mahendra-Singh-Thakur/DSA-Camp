@@ -16,16 +16,14 @@ let topics = document.querySelectorAll(".topics");
 topics.forEach((t) => {
     let string = "";
     for (let item of DSA.Modules[t.innerText]) {
-        string += `<li id="${item}">
-                    <div class="content">
-                        <a class="thumbnail" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
-                            <img src="${imgscr}" alt="please wait">
-                        </a>
-                        <div class="info">
-                            <a id="${item}" href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+        string += `<a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
+                        <div class="list-container">
+                            <img class="image" src="${imgscr}">
+                            <li>
+                                <a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                            </li>
                         </div>
-                    </div>
-                    </li>`;
+                    </a>`;
     }
 
     t.addEventListener("click", () => {
