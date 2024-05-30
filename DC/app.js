@@ -3,7 +3,7 @@ console.log("");
             let Topic = document.querySelector("#Topic");
             let subtopics = document.querySelector("#subtopics");
             let ul = document.createElement("ul");
-            for (let topic of PS.Topics) {
+            for (let topic of DC.Topics) {
                 let li = document.createElement("li");
                 li.setAttribute("class", "topics");
                 li.setAttribute("id", topic);
@@ -14,12 +14,12 @@ console.log("");
             let topics = document.querySelectorAll(".topics");
             topics.forEach((t) => {
                 let string = "";
-                for (let item of PS.Modules[t.innerText]) {
-                    string += `<a href="../PS/SubTopics/${t.innerText}/${item}/index.html">
+                for (let item of DC.Modules[t.innerText]) {
+                    string += `<a href="../DC/SubTopics/${t.innerText}/${item}/index.html">
                                     <div class="list-container">
-                                        <img class="image" src="../IMAGES/PS/logologo.jpg">
+                                        <img class="image" src="../IMAGES/DC/logologo.jpg">
                                         <li>
-                                            <a href="../PS/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
+                                            <a href="../DC/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
                                         </li>
                                     </div>
                                 </a>`;

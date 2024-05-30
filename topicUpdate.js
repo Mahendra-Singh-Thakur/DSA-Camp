@@ -47,14 +47,14 @@ const rootDirectoryPath = '/Git hub/DSA-Camp/';
 // Define the Topics array
 // const topics = ["DC", "CN", "COA", "ADA", "OOPM", "DS", "PS"];
 const topics = {
-    "DSA": "Data Structures And Algorithms",
-    "DC ": "Data Communication",
-    "CN ": "Computer Networks",
-    "COA": "Computer Organization And Architecture",
-    "ADA": "Algorithms And Data Structures",
+    "DSA": "Data Structures &amp; Algorithms",
+    "DC": "Data Communication",
+    "CN": "Computer Networks",
+    "COA": "Computer Organization &amp; Architecture",
+    "ADA": "Algorithms &amp; Data Structures",
     "OOPM": "Object Oriented Programming",
-    "DS ": "Data Structures",
-    "PS": "Probability and Statistics"
+    "DS": "Data Structures",
+    "PS": "Probability &amp; Statistics"
 };
 // for (let topic in topics) {
 //     console.log(topic);
@@ -490,11 +490,12 @@ const generateContent = (topic, fileName) => {
                 border-radius: 10px;
             }`;
         case 'app.js':
-            return `let list = document.querySelector(".list");
+            return `console.log("");
+            let list = document.querySelector(".list");
             let Topic = document.querySelector("#Topic");
             let subtopics = document.querySelector("#subtopics");
             let ul = document.createElement("ul");
-            for (let topic of DSA.Topics) {
+            for (let topic of ${topic}.Topics) {
                 let li = document.createElement("li");
                 li.setAttribute("class", "topics");
                 li.setAttribute("id", topic);
@@ -505,12 +506,12 @@ const generateContent = (topic, fileName) => {
             let topics = document.querySelectorAll(".topics");
             topics.forEach((t) => {
                 let string = "";
-                for (let item of DSA.Modules[t.innerText]) {
-                    string += \`<a href="../DSA/SubTopics/\${t.innerText}/\${item}/index.html">
+                for (let item of ${topic}.Modules[t.innerText]) {
+                    string += \`<a href="../${topic}/SubTopics/\${t.innerText}/\${item}/index.html">
                                     <div class="list-container">
-                                        <img class="image" src="../IMAGES/DSA/logologo.jpg">
+                                        <img class="image" src="../IMAGES/${topic}/logologo.jpg">
                                         <li>
-                                            <a href="../DSA/SubTopics/\${t.innerText}/\${item}/index.html">\${item}</a>
+                                            <a href="../${topic}/SubTopics/\${t.innerText}/\${item}/index.html">\${item}</a>
                                         </li>
                                     </div>
                                 </a>\`;

@@ -1,11 +1,11 @@
 COURSESName = {
     "DSA": "Data Structures &amp; Algorithms",
-    "DC ": "Data Communication",
-    "CN ": "Computer Networks",
+    "DC": "Data Communication",
+    "CN": "Computer Networks",
     "COA": "Computer Organization &amp; Architecture",
     "ADA": "Algorithms &amp; Data Structures",
     "OOPM": "Object Oriented Programming",
-    "DS ": "Data Structures",
+    "DS": "Data Structures",
     "PS": "Probability &amp; Statistics"
 };
 let COURSES = [
