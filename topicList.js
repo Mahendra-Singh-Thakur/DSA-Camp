@@ -89,7 +89,7 @@ let COURSES = [
         "Physical layer": ["Transmission Media", "Bandwidth", "Multiplexing", "Switching"],
         "Data Link Layer": ["Framing", "Error Detection and Correction", "Flow Control", "Sliding Window Protocol","Protocol verification"],
         "Medium Access Control": ["Introduction to MAC", "BEB Algorithm", "ALOHA and Slotted ALOHA", "CSMA and its types", "Collision Free Protocols"],
-        "Network Layer": [ "Routing algorithms", "IP Addresses", "IPv4 & IPv6", ],
+        "Network Layer": [ "Routing algorithms", "IP Addresses", "IPv4 and IPv6", ],
         "Transport Layer": ["UDP", "TCP"],
          "Application Layer": ["WWW", "HTTP", "FTP", "SSH", "DHP","Email","Network Management"],
            
