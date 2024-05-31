@@ -27,16 +27,16 @@ function bucketSort(arr, steps) {
     steps.push(string);
     string = "";
     for (let i = 0; i < numBuckets; i++) {
-        string += (`<p>Bucket ${i}  =  (${buckets[i].join(' ')})</p>`);
+        string += (`<p>Bucket ${i}  =  [${buckets[i].join(' , ')+" ]"}</p>`);
     }
     steps.push(string);
     string = "";
     for (let i = 0; i < numBuckets; i++) {
         buckets[i].sort((a, b) => a - b);
-        string += (`<p>Sorted Bucket ${i}  =  (${buckets[i].join(' ')})</p>`);
+        string += (`<p>Sorted Bucket ${i}  =  [${buckets[i].join(' , ')+" ]"}</p>`);
     }
     steps.push(string);
-    steps.push("Sorted Buckets: " + JSON.stringify(buckets, "\n"));
+    steps.push("Sorted Buckets: " + JSON.stringify(buckets, "\t\n"));
     let sortedArray = [];
     for (let i = 0; i < numBuckets; i++) {
         sortedArray = sortedArray.concat(buckets[i]);
@@ -44,12 +44,12 @@ function bucketSort(arr, steps) {
     for (let i = 0; i < n; i++) {
         arr[i] = sortedArray[i];
     }
-    steps.push("Sorted array: " + arr.join(' '));
+    steps.push("Sorted array: [ " + arr.join(' , ')+" ]");
 }
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ')+" ]");
     bucketSort(arr, steps);
     let delay = 0;
     for (let step of steps) {

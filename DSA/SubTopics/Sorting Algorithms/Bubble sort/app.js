@@ -15,7 +15,7 @@ function bubbleSort(arr, steps) {
                 let temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
-                steps.push(`Iteration ${i + 1}: Swapping ${arr[j]} and ${arr[j + 1]} : ${arr.join(' ')}`);
+                steps.push(`Iteration ${i + 1}: Swapping ${arr[j]} and ${arr[j + 1]} : [ ${arr.join(' , ')} ]`);
             }
         }
     }
@@ -23,9 +23,9 @@ function bubbleSort(arr, steps) {
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ')+" ]");
     bubbleSort(arr, steps);
-    steps.push("Sorted array: " + arr.join(' '));
+    steps.push("Sorted array: [ " + arr.join(' , ')+" ]");
     let delay = 0;
     for (let step of steps) {
         setTimeout((step) => {
@@ -45,7 +45,6 @@ sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
     steps.push("Original array: " + arr.join(' '));
-    console.log(arr.join(' '));
     bubbleSort(arr, steps);
     let delay = 0;
     sortedArrayElement.innerHTML = "";

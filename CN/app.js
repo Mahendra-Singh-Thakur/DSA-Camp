@@ -52,7 +52,7 @@ if (sessionStorage.getItem('lastClicked') !== null) {
 if (sessionStorage.getItem('lastClicked') === null) {
     console.log("default");
     document.addEventListener("DOMContentLoaded", function () {
-        let element = document.getElementById('Basics of DSA');
+        let element = document.getElementById('Computer Networks');
         let event = new Event("click");
         element.dispatchEvent(event);
     });

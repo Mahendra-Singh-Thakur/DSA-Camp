@@ -22,14 +22,14 @@ function selectionSort(arr, steps) {
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
         }
-        steps.push(`Iteration ${i + 1}: Select: (${arr[i]}) and Swapping With ((${arr[minIndex]}) Index: (${i})) : ${arr.join(' ')}`);
+        steps.push(`Iteration ${i + 1}: Select: (${arr[i]}) and Swapping With ((${arr[minIndex]}) Index: (${i})) : [ ${arr.join(' , ') + " ]"}`);
     }
-    steps.push("Sorted array: " + arr.join(' '));
+    steps.push("Sorted array: [ " + arr.join(' , ') + " ]");
 }
 function main() {
     let arr = [64, 34, 25, 12, 22, 11, 90];
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ') + " ]");
     selectionSort(arr, steps);
     let delay = 0;
     for (let step of steps) {
@@ -48,10 +48,9 @@ main();
 sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
-    console.log(arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ') + " ]");
     selectionSort(arr, steps);
-    steps.push("Sorted array: " + arr.join(' '));
+    steps.push("Sorted array: [ " + arr.join(' , ') + " ]");
     let delay = 0;
     sortedArrayElement.innerHTML = "";
     for (let step of steps) {

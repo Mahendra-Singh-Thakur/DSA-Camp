@@ -1,4 +1,3 @@
-console.log("Shell sort");
 let sortedArrayElement = document.getElementById('sorted-array');
 let sortButton = document.getElementById('sort-button');
 function getInputArray() {
@@ -20,15 +19,15 @@ function shellSort(arr, steps) {
             }
             arr[j] = temp;
         }
-        steps.push(`Gap ${gap}: ${arr.join(' ')}`);
+        steps.push(`Gap ${gap}: [ ${arr.join(' , ') + " ]"}`);
         gap = Math.floor(gap / 2);
     }
-    steps.push("Sorted array: " + arr.join(' '));
+    steps.push("Sorted array: [ " + arr.join(' , ') + " ]");
 }
 function main() {
     let arr = [9, 6, 35, 14, 13, 42, 11, 10, 5, 21, 4, 3, 22, 8, 7, 11, 1];
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ') + " ]");
     shellSort(arr, steps);
     let delay = 0;
     for (let step of steps) {
@@ -46,7 +45,7 @@ function main() {
 sortButton.addEventListener('click', () => {
     let arr = getInputArray();
     let steps = [];
-    steps.push("Original array: " + arr.join(' '));
+    steps.push("Original array: [ " + arr.join(' , ') + " ]");
     shellSort(arr, steps);
     let delay = 0;
     sortedArrayElement.innerHTML = "";

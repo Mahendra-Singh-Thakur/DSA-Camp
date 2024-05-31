@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Bubblegum Sans;
     box-sizing: border-box;
 }
 
@@ -118,13 +117,14 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #sort-explanation {
-    height: 92%;
+
     font-size: 1.2rem;
-    max-width: 50%;
-    padding: 29px;
+    max-width: 55%;
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -157,13 +157,17 @@ nav ul li a:hover {
 }
 
 #input {
-    width: 100%;
-    height: 46%;
+
+
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+
 }
+
 
 #input input {
     font-size: 1.5rem;
@@ -173,6 +177,8 @@ nav ul li a:hover {
     padding: 5px;
     margin: 5% 0%;
     width: 50%;
+
+
 }
 
 #input input:focus {
@@ -215,7 +221,7 @@ nav ul li a:hover {
 }
 
 #sort-algorithm pre {
-    color: #263647;
+    /* color: #263647; */
     line-height: 1.6;
     overflow-x: auto;
     white-space: pre-wrap;
@@ -224,6 +230,8 @@ nav ul li a:hover {
 #sort-algorithm pre code {
     font-family: 'Courier New', monospace;
 }
+
+
 
 #sorted-array {
     width: 80%;
@@ -237,6 +245,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
+
 #sorted-array div {
     width: 60%;
     margin: 0.5%;
@@ -246,6 +255,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.2rem;
     background-color: #5dc6b1;
+
 }
 
 @keyframes array-item {
