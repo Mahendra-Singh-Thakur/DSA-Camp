@@ -47,7 +47,7 @@ let COURSES = [
             "Min Spanning Tree": ["Introduction to Minimum Spanning Trees (MST)", "Prim's Algorithm", "Kruskal's Algorithm", "Graph Representation and Data Structures",],
             "Recursive Tree": ["Introduction to Recursive Trees", "Recursive Tree Traversal Algorithms", "Tree Rotations", "Application",],
             "Heaps": ["Binary Heap", "Heap Operations", "Heap Sort", "Priority Queue", "Applications and Implementations",],
-            "Graphs": [" Basic Concepts", "Graph Representation", "Graph Traversal Algorithms", "Graph Coloring", "Special Graphs and Properties", "Applications",],
+            "Graphs": ["Basic Concepts", "Graph Representation", "Graph Traversal Algorithms", "Graph Coloring", "Special Graphs and Properties", "Applications",],
             "Graph Traversal": ["DFS", "BFS", "Traversal Orders", "Graph Representation"],
             "Shortest Path Algorithms": ["Kruskal", "Prim's", "Dijkstra's",],
             "Recursion": ["Basic Recursion Concepts", "Mathematical Problems", "Array and String Manipulations", "Divide and Conquer Method", "Dynamic Programming", "Backtracking Algorithms"],
@@ -73,13 +73,26 @@ let COURSES = [
     },
     CN = {
         Name: "CN",
-        Topics: ["A", "B", "C", "D", "E"],
+        Topics: ["Computer Networks",
+        "OSI Model",
+        "Tcp/IP Protocol",
+        "Physical layer",
+        "Data Link Layer",
+        "Medium Access Control (MAC)",
+        "Network Layer",
+        "Transport Layer",
+         "Application Layer"],
         Modules: {
-            "A": ["a", "b", "c", "d", "e"],
-            "B": ["a", "b", "c", "d", "e"],
-            "C": ["a", "b", "c", "d", "e"],
-            "D": ["a", "b", "c", "d", "e"],
-            "E": ["a", "b", "c", "d", "e"],
+            "Computer Networks": ["Network Component and Categories", "Types of networks", "Topologies"],
+        "OSI Model": ["Introduction","Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer", "Session Layer","Presentation Layer","Application Layer"],
+        "Tcp/IP Protocol": ["Introduction", "Network Interface Layer (Link Layer)", "Internet Layer", "Transport Layer", "Application Layer"],
+        "Physical layer": ["Transmission Media", "Bandwidth", "Multiplexing", "Switching"],
+        "Data Link Layer": ["Framing", "Error Detection and Correction", "Flow Control", "Sliding Window Protocol","Protocol verification"],
+        "Medium Access Control (MAC)": ["Introduction to MAC", "(BEB) Algorithm", "ALOHA and Slotted- ALOHA", "(CSMA, CSMA/CD, CSMA/CA", " Collision Free Protocols"],
+        "Network Layer": [ "Routing algorithms", "IP Addresses", "IPv4 & IPv6", ],
+        "Transport Layer": ["UDP", "TCP"],
+         "Application Layer": ["WWW", "HTTP", "FTP", "SSH", "DHP","Email","Network Management"],
+           
         }
     },
     COA = {
@@ -164,8 +177,8 @@ let COURSES = [
         "Algebraic Structures": ["Definition", "Semi Groups", "Monoid Groups", "Abelian Groups", "Subgroup","Cyclic Group","Homomorphism and Isomorpism","Rings and Fields"],
         "Propositional Logic": ["Proposition", "First order logic", "Basic logical operation", "Truth tables", "Tautologies","Contradictions"," Normal Forms"],
         "Graph Theory": ["Basics of Graph", "Planer graphs", "Multigraphs and weighted graphs", "", "e"],
-        "Posets,Hasse Diagram and Lattices": ["a", "b", "c", "d", "e"],
-        "Combinatorics" : ["a", "b", "c", "d", "e"],        
+        "Posets,Hasse Diagram and Lattices": ["Posets (Partially Ordered Sets)", "Hasse Diagrams", "Lattices"],
+        "Combinatorics" : ["Basic Principles", "Recurrence Relation", "Homogeneous solutions"],        
         }
     },
     PS = {
