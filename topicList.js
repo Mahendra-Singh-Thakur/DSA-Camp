@@ -184,15 +184,20 @@ let COURSES = [
     },
     PS = {
         Name: "PS",
-        Topics: ["A", "B", "C", "D", "E"],
+        Topics: ["Data Collection & Analysis", 
+        "Statistical Measures",
+        "Correlation & Regression Analysi",
+        "Probability Theory",
+        "Discrete and Continuous Probability Distributions"],
         Modules: {
-            "A": ["a", "b", "c", "d", "e"],
-            "B": ["a", "b", "c", "d", "e"],
-            "C": ["a", "b", "c", "d", "e"],
-            "D": ["a", "b", "c", "d", "e"],
-            "E": ["a", "b", "c", "d", "e"],
-        }
+        "Data Collection & Analysis": ["Introduction to statistics", "Data", "Tabulation of data", "Types of graphs and diagrams", "e"], 
+        "Statistical Measures": ["Measures of central tendency", "Arithmetic mean", " Median", "Mode", "Geometric mean and Harmonic mean","Range","Quartile deviation","Average deviation","Standard deviation","Skewness and Kurtosis"],
+        "Correlation & Regression Analysi": ["Introduction", "Scatter diagram", "Karl Pearson's correlation coefficien", "Coefficient of correlation", "Rank correlation",", Regression lines",", Regression equations"," Standard error of estimate"],
+        "Probability Theory": ["Definition", "Events in Probablity", "Basic laws of Probability", "Bayes's theorem", " Random variables"," Probability mass function"," Probability density function"],
+        "Discrete and Continuous Probability Distributions": ["Introduction"," Binomial and Poisson's distribution", " Normal distribution", "Exponential distribution", " Gamma & Beta distribution"],
+           
     },
+},
 ];
 const courseSubArrays = {
     "dsa": DSA,
