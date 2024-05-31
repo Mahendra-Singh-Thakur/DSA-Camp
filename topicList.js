@@ -62,13 +62,22 @@ let COURSES = [
     },
     DC = {
         Name: "DC",
-        Topics: ["A", "B", "C", "D", "E"],
+        Topics: ["Signals and Systems",
+        "Modulation",
+        "Modulation Techniques", 
+        "Sampling of Signals", 
+        "Basics of Network",
+        "Physical Layer",
+        "Transmission Errors"],
         Modules: {
-            "A": ["a", "b", "c", "d", "e"],
-            "B": ["a", "b", "c", "d", "e"],
-            "C": ["a", "b", "c", "d", "e"],
-            "D": ["a", "b", "c", "d", "e"],
-            "E": ["a", "b", "c", "d", "e"],
+        "Signals and Systems": ["Introduction to Communication systems", "Signals", "Data Transmission", "Systems"],
+        "Modulation": ["Introduction", "AM", "FM", "Phase Modulation"],
+        "Modulation Techniques": ["ASK", "BPSK", "DPSK", "QPSK", "BFSK"], 
+        "Sampling of Signals": ["Sampling Theorem", " PAM", "Digital Signal", "Quantization", "PCM","Data Rates","Delta Modluations"], 
+        "Basics of Network": ["Intoduction", "OSI Model", "Serial and Parallel Transmission", "Modes of Transmission", "Topologies","Line Encoding"],
+        "Physical Layer": ["Introduction", "Interface and Standards", "Modems", "Multiplexing", "Switched Communication Networks"],
+        "Transmission Errors": ["Content Error", "Methods of error control", "Error Detection and Methods", "Error Correction and Methods", "Checksum"],
+            
         }
     },
     CN = {
@@ -97,13 +106,22 @@ let COURSES = [
     },
     COA = {
         Name: "COA",
-        Topics: ["A", "B", "C", "D", "E"],
+        Topics: ["Basics of COA",
+        "CPU",
+        "Control Unit Organistion",
+        "Computer Arithmetic",
+        "IO Organisation",
+        "Memory Organisation",
+        "Multiprocessors"],
         Modules: {
-            "A": ["a", "b", "c", "d", "e"],
-            "B": ["a", "b", "c", "d", "e"],
-            "C": ["a", "b", "c", "d", "e"],
-            "D": ["a", "b", "c", "d", "e"],
-            "E": ["a", "b", "c", "d", "e"],
+        "Basics of COA": ["Computer Structures", "Control Word", "Stack Organisation", "Instruction Format"],
+        "CPU": ["Registers", "ALU", "Bus", "Addressing modes"],
+        "Contol Unit Organisation": ["Instructions", "Fetch and Execution Cycle", "Hardwired Unit", "Micro Progams and units"],
+        "Computer Arithmetic": ["Addition and Substraction", "Multiplication and Division", "Booth's Algorithm", "Floating Point Operations", "1's and 2's compliments"],
+        "IO Organisation": ["IO Interfaces PCI bus", "SCSI Bus", "USB", "Data Tranfer", "DMA","IO Processors"],
+        "Memory Organisation": ["Memory Hiearchy", "RAM and ROM", "Secondary Memory", "Cache Memory", "Virtual Memory"],
+        "Multiprocessors": ["Introduction", "Inter Processor Communications", "Memory in Muliprocessors", "Pipeline", "RIS and CISC","Multicore Processors"],
+           
         }
     },
     ADA = {
@@ -132,7 +150,7 @@ let COURSES = [
             "Hashing": ["Introduction to Hashing", "Hash Tables", "Hash Functions", "Collision resolution", "Linear probing", "Quadratic Double Hashing", "Bucket Hashing", "Deletion and Rehashing"],
             "NP-Completeness and Computational Intractability": ["Introduction to NP Problems", " NP-Complete Problems", "NP-Hard Problems", "Reductions", "Common NP Problems", "Satisfiability problem"],
             "Randomized Algorithms and Approximation Algorithms": ["Introduction to Randomized Algorithms", "Introduction to Approximation Algorithms"],
-        },
+        }
     },
     OOPM = {
         Name: "OOPM",
@@ -177,9 +195,9 @@ let COURSES = [
         "Proving Techniques":["Mathematical induction", " Proof by contradiction"],
         "Algebraic Structures": ["Definition", "Semi Groups", "Monoid Groups", "Abelian Groups", "Subgroup","Cyclic Group","Homomorphism and Isomorpism","Rings and Fields"],
         "Propositional Logic": ["Proposition", "First order logic", "Basic logical operation", "Truth tables", "Tautologies","Contradictions"," Normal Forms"],
-        "Graph Theory": ["Basics of Graph", "Planer graphs", "Multigraphs and weighted graphs", "", "e"],
-        "Posets,Hasse Diagram and Lattices": ["a", "b", "c", "d", "e"],
-        "Combinatorics" : ["a", "b", "c", "d", "e"],        
+        "Graph Theory": ["Basics of Graph", "Planer graphs", "Multigraphs and weighted graphs", "Isomorphic graphs", "Paths and Cycles Connectivity","Eulerian and Hamiltonian's","Graph coloring","Isomorphism and Homomorphism"],
+        "Posets,Hasse Diagram and Lattices": ["Introduction", "Ordered set", "Hasse diagrams", "Types of Ordered Sets", "Lattices"],
+        "Combinatorics" : ["Introduction", "Recurrence Relation", "Types of Solutions", "Function Generation"],        
         }
     },
     PS = {
@@ -196,7 +214,7 @@ let COURSES = [
         "Probability Theory": ["Definition", "Events in Probablity", "Basic laws of Probability", "Bayes's theorem", "Random variables","Probability mass function","Probability density function"],
         "Discrete and Continuous Probability Distributions": ["Introduction","Binomial and Poisson's distribution", "Normal distribution", "Exponential distribution", "Gamma & Beta distribution"],
            
-    },
+    }
 },
 ];
 const courseSubArrays = {
