@@ -17,7 +17,7 @@ topics.forEach((t) => {
     for (let item of DSA.Modules[t.innerText]) {
         string += `<a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">
                         <div class="list-container">
-                            <img class="image" src="../IMAGES/DSA/${item}.gif">
+                            <img class="image" src="../IMAGES/DSA/logologo.jpg">
                             <li>
                                 <a href="../DSA/SubTopics/${t.innerText}/${item}/index.html">${item}</a>
                             </li>

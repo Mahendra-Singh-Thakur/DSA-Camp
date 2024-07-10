@@ -64,20 +64,20 @@ let COURSES = [
         Name: "DC",
         Topics: ["Signals and Systems",
         "Modulation",
-        "Modulation Techniques", 
-        "Sampling of Signals", 
+        "Modulation Techniques",
+        "Sampling of Signals",
         "Basics of Network",
         "Physical Layer",
         "Transmission Errors"],
         Modules: {
         "Signals and Systems": ["Introduction to Communication systems", "Signals", "Data Transmission", "Systems"],
         "Modulation": ["Introduction", "AM", "FM", "Phase Modulation"],
-        "Modulation Techniques": ["ASK", "BPSK", "DPSK", "QPSK", "BFSK"], 
-        "Sampling of Signals": ["Sampling Theorem", " PAM", "Digital Signal", "Quantization", "PCM","Data Rates","Delta Modluations"], 
+        "Modulation Techniques": ["ASK", "BPSK", "DPSK", "QPSK", "BFSK"],
+        "Sampling of Signals": ["Sampling Theorem", " PAM", "Digital Signal", "Quantization", "PCM","Data Rates","Delta Modluations"],
         "Basics of Network": ["Intoduction", "OSI Model", "Serial and Parallel Transmission", "Modes of Transmission", "Topologies","Line Encoding"],
         "Physical Layer": ["Introduction", "Interface and Standards", "Modems", "Multiplexing", "Switched Communication Networks"],
         "Transmission Errors": ["Content Error", "Methods of error control", "Error Detection and Methods", "Error Correction and Methods", "Checksum"],
-            
+
         }
     },
     CN = {
@@ -101,14 +101,14 @@ let COURSES = [
         "Network Layer": [ "Routing algorithms", "IP Addresses", "IPv4 and IPv6", ],
         "Transport Layer": ["UDP", "TCP"],
          "Application Layer": ["WWW", "HTTP", "FTP", "SSH", "DHP","Email","Network Management"],
-           
+
         }
     },
     COA = {
         Name: "COA",
         Topics: ["Basics of COA",
         "CPU",
-        "Control Unit Organistion",
+        "Contol Unit Organisation",
         "Computer Arithmetic",
         "IO Organisation",
         "Memory Organisation",
@@ -121,7 +121,6 @@ let COURSES = [
         "IO Organisation": ["IO Interfaces PCI bus", "SCSI Bus", "USB", "Data Tranfer", "DMA","IO Processors"],
         "Memory Organisation": ["Memory Hiearchy", "RAM and ROM", "Secondary Memory", "Cache Memory", "Virtual Memory"],
         "Multiprocessors": ["Introduction", "Inter Processor Communications", "Memory in Muliprocessors", "Pipeline", "RIS and CISC","Multicore Processors"],
-           
         }
     },
     ADA = {
@@ -197,23 +196,23 @@ let COURSES = [
         "Propositional Logic": ["Proposition", "First order logic", "Basic logical operation", "Truth tables", "Tautologies","Contradictions"," Normal Forms"],
         "Graph Theory": ["Basics of Graph", "Planer graphs", "Multigraphs and weighted graphs", "Isomorphic graphs", "Paths and Cycles Connectivity","Eulerian and Hamiltonian's","Graph coloring","Isomorphism and Homomorphism"],
         "Posets,Hasse Diagram and Lattices": ["Introduction", "Ordered set", "Hasse diagrams", "Types of Ordered Sets", "Lattices"],
-        "Combinatorics" : ["Introduction", "Recurrence Relation", "Types of Solutions", "Function Generation"],        
+        "Combinatorics" : ["Introduction", "Recurrence Relation", "Types of Solutions", "Function Generation"],
         }
     },
     PS = {
         Name: "PS",
-        Topics: ["Data Collection & Analysis", 
+        Topics: ["Data Collection & Analysis",
         "Statistical Measures",
         "Correlation & Regression Analysi",
         "Probability Theory",
         "Discrete and Continuous Probability Distributions"],
         Modules: {
-        "Data Collection & Analysis": ["Introduction to statistics", "Data", "Tabulation of data", "Types of graphs and diagrams"], 
+        "Data Collection & Analysis": ["Introduction to statistics", "Data", "Tabulation of data", "Types of graphs and diagrams"],
         "Statistical Measures": ["Measures of central tendency", "Arithmetic mean", "Median", "Mode", "Geometric mean and Harmonic mean","Range","Quartile deviation","Average deviation","Standard deviation","Skewness and Kurtosis"],
         "Correlation & Regression Analysi": ["Introduction", "Scatter diagram", "Karl Pearson's correlation coefficien", "Coefficient of correlation", "Rank correlation","Regression lines","Regression equations"," Standard error of estimate"],
         "Probability Theory": ["Definition", "Events in Probablity", "Basic laws of Probability", "Bayes's theorem", "Random variables","Probability mass function","Probability density function"],
         "Discrete and Continuous Probability Distributions": ["Introduction","Binomial and Poisson's distribution", "Normal distribution", "Exponential distribution", "Gamma & Beta distribution"],
-           
+
     }
 },
 ];
